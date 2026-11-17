@@ -1,0 +1,498 @@
+/* ==========================================
+   ZERVON CODE ACADEMY
+   LESSON PAGES STYLESHEET
+   Requires css/style.css (variables, navbar, footer)
+========================================== */
+
+
+/* 01. SKIP LINK & READING PROGRESS */
+
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    z-index: 2000;
+
+    padding: 10px 16px;
+    border-radius: 6px;
+
+    background: var(--gold);
+    color: #111;
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+
+    width: 0;
+    height: 3px;
+
+    background: linear-gradient(90deg, var(--gold-light), var(--gold-dark));
+}
+
+
+/* 02. LESSON HERO */
+
+.lesson-hero {
+    padding: 80px 0 65px;
+
+    background:
+        radial-gradient(ellipse at 80% 20%, #d8b4771b, transparent 45%),
+        var(--bg);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 26px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.breadcrumb a {
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb i {
+    font-size: 8px;
+}
+
+.lesson-hero h1 {
+    max-width: 780px;
+    margin-bottom: 20px;
+
+    font-family: var(--heading-font);
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.lesson-hero h1 span {
+    display: block;
+
+    background: linear-gradient(100deg, #fff0ce, var(--gold), var(--gold-dark));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.lesson-hero > .section-container > p {
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.lesson-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 26px;
+}
+
+.lesson-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #aeb2bd;
+    font-size: 12px;
+}
+
+.lesson-meta i {
+    color: var(--gold);
+}
+
+
+/* 03. LAYOUT */
+
+.lesson-section {
+    padding: 70px 0 110px;
+    background: #0c0e12;
+}
+
+.lesson-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* 04. SIDEBAR */
+
+.lesson-sidebar {
+    position: sticky;
+    top: 110px;
+
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar-card {
+    padding: 20px 18px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.sidebar-card h2 {
+    margin-bottom: 14px;
+
+    color: var(--gold);
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 10px;
+    border-radius: 6px;
+
+    color: var(--muted);
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.sidebar-list a:hover {
+    background: var(--surface-light);
+    color: var(--text);
+}
+
+.sidebar-list a.active {
+    background: #d8b4771a;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.sidebar-list .num {
+    min-width: 20px;
+    color: #747987;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* 05. LESSON CONTENT */
+
+.lesson-content {
+    min-width: 0;
+    max-width: 780px;
+}
+
+.lesson-block {
+    margin-bottom: 58px;
+    scroll-margin-top: 110px;
+}
+
+.lesson-content h2 {
+    margin-bottom: 18px;
+
+    font-family: var(--heading-font);
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.lesson-content h3 {
+    margin: 28px 0 12px;
+
+    font-family: var(--heading-font);
+    font-size: 19px;
+}
+
+.lesson-content p {
+    margin-bottom: 16px;
+
+    color: #c3c7d1;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+    margin-bottom: 18px;
+    padding-left: 22px;
+
+    color: #c3c7d1;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.lesson-content li::marker {
+    color: var(--gold);
+}
+
+.lesson-content p code,
+.lesson-content li code {
+    padding: 2px 7px;
+    border-radius: 5px;
+
+    background: #d8b4771a;
+    color: var(--gold-light);
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+
+/* 06. CALLOUT BOXES */
+
+.callout {
+    margin: 24px 0;
+    padding: 18px 20px;
+
+    background: #d8b4770d;
+    border: 1px solid var(--gold-border);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+.callout strong {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.callout p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 07. CODE BLOCKS */
+
+.code-block {
+    margin: 22px 0 26px;
+
+    background: #0b0d12;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.code-block-header {
+    min-height: 44px;
+    padding: 0 14px 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #151820;
+    border-bottom: 1px solid var(--border);
+}
+
+.code-lang {
+    color: #a0a5b1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 6px 11px;
+
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.copy-btn:hover,
+.copy-btn.copied {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.code-block pre {
+    padding: 20px 18px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    color: #e3e6ee;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    white-space: pre;
+}
+
+
+/* 08. PREVIOUS / NEXT NAVIGATION */
+
+.lesson-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    margin-top: 20px;
+    padding-top: 40px;
+
+    border-top: 1px solid var(--border);
+}
+
+.lesson-nav-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 20px 22px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: var(--transition);
+}
+
+.lesson-nav-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-border);
+}
+
+.lesson-nav-card.next {
+    text-align: right;
+}
+
+.lesson-nav-card small {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.lesson-nav-card strong {
+    font-family: var(--heading-font);
+    font-size: 16px;
+}
+
+
+/* 09. RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+    .lesson-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 860px) {
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: static;
+        max-height: none;
+        order: 2;
+    }
+
+    .sidebar-toc {
+        display: none;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .lesson-hero {
+        padding: 60px 0 45px;
+    }
+
+    .lesson-hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .lesson-section {
+        padding: 50px 0 80px;
+    }
+
+    .lesson-content p,
+    .lesson-content ul,
+    .lesson-content ol {
+        font-size: 14px;
+    }
+
+    .lesson-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-nav-card.next {
+        text-align: left;
+    }
+
+}
+
+
+/* 10. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lesson-nav-card,
+    .copy-btn,
+    .skip-link {
+        transition: none;
+    }
+
+}
+
+
+/* ==========================================
+   END OF LESSON STYLESHEET
+========================================== */
