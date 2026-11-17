@@ -20,7 +20,7 @@ const courses = [
         icon: "fa-solid fa-lightbulb",
         duration: "2 Hours",
         level: "Beginner",
-        link: "courses/coding.html"
+        link: "coding.html"
     },
 
     {
@@ -32,7 +32,7 @@ const courses = [
         icon: "fa-solid fa-laptop-code",
         duration: "2 Hours",
         level: "Beginner",
-        link: "courses/vscode.html"
+        link: "vscode.html"
     },
 
     {
@@ -44,7 +44,7 @@ const courses = [
         icon: "fa-brands fa-html5",
         duration: "8 Hours",
         level: "Beginner",
-        link: "courses/html.html"
+        link: "html.html"
     },
 
     {
@@ -56,7 +56,7 @@ const courses = [
         icon: "fa-brands fa-css3-alt",
         duration: "10 Hours",
         level: "Beginner",
-        link: "courses/css.html"
+        link: "css.html"
     },
 
     {
@@ -68,7 +68,7 @@ const courses = [
         icon: "fa-brands fa-js",
         duration: "12 Hours",
         level: "Beginner",
-        link: "courses/javascript.html"
+        link: "javascript.html"
     },
 
     {
@@ -80,7 +80,7 @@ const courses = [
         icon: "fa-solid fa-code",
         duration: "8 Hours",
         level: "Intermediate",
-        link: "courses/projects.html"
+        link: "projects.html"
     },
 
     {
@@ -92,7 +92,7 @@ const courses = [
         icon: "fa-brands fa-github",
         duration: "4 Hours",
         level: "Beginner",
-        link: "courses/github.html"
+        link: "github.html"
     },
 
     {
@@ -104,7 +104,7 @@ const courses = [
         icon: "fa-solid fa-rocket",
         duration: "3 Hours",
         level: "Beginner",
-        link: "courses/deployment.html"
+        link: "deployment.html"
     }
 
 ];
