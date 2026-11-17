@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERVON — Student Developer Movement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #050505;
+            --bg-surface: #0a0a0a;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --neon-green: #00FF66;
+            --text-main: #EAEAEA;
+            --text-muted: #888888;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --font-sans: 'Outfit', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-deep); color: var(--text-main); font-family: var(--font-sans); overflow-x: hidden; }
+
+        .wrapper { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; }
+        
+        .tag { font-family: var(--font-code); color: var(--gold-primary); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+        .gold { background: linear-gradient(135deg, var(--gold-light), var(--gold-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 6rem 0 4rem; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 7rem); font-weight: 900; letter-spacing: 0.1em; color: #fff; margin-bottom: 1rem; text-shadow: 0 0 30px rgba(212,175,55,0.3); }
+        .hero p { font-size: clamp(1rem, 2vw, 1.3rem); color: var(--text-muted); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+        /* About Section */
+        .about-box { background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 4rem; border-radius: 16px; margin-top: 4rem; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
+        .about-box h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1.5rem; color: #fff; }
+        .about-box p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+
+        /* Footer / Closing */
+        .footer { text-align: center; padding: 6rem 0 3rem; border-top: 1px solid rgba(212,175,55,0.1); margin-top: 6rem; }
+        .footer h3 { font-size: clamp(1.2rem, 2.5vw, 2rem); font-weight: 800; color: #fff; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="tag">// ELITE_STUDENT_MOVEMENT</span>
+            <h1>ZERVON</h1>
+            <p>WE DON'T JUST LEARN CODE. <span class="gold">WE BUILD THE FUTURE.</span></p>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-box">
+            <span class="tag">// 01. ABOUT US</span>
+            <h2>MORE THAN A <span class="gold">CODING PLATFORM.</span></h2>
+            <p>ZERVON is an elite, high-performance student developer movement engineered to bridge the gap between academic theory and world-class software engineering. We are not just another coding club—we are a sanctuary for ambitious minds who refuse to settle for ordinary.</p>
+            <p>We empower students to dive deep into professional tools like <strong>VS Code</strong>, navigate the open-source universe through <strong>GitHub</strong>, and architect robust, real-world digital solutions that scale.</p>
+        </section>
+
+        <!-- Footer / Closing -->
+        <footer class="footer">
+            <h3>THINK DIFFERENT. CODE FEARLESSLY. BUILD LIMITLESSLY.</h3>
+            <p class="gold" style="font-weight: 700; letter-spacing: 1px;">WELCOME TO ZERVON — THE NEXT GENERATION OF DEVELOPERS.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

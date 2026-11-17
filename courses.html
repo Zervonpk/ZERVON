@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Explore all ZERVON Code Academy courses. Learn HTML, CSS, JavaScript, GitHub and web development in Roman Urdu.">
+
+    <title>All Courses | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Courses Stylesheet -->
+    <link rel="stylesheet" href="css/courses.css">
+
+    <!-- Main JavaScript -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Courses JavaScript -->
+    <script src="js/courses.js" defer></script>
+
+</head>
+
+<body id="top">
+
+    <!-- ==================================
+         NAVIGATION
+    =================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="courses.html" class="nav-link active">
+                    Courses
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    About Us
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="#all-courses" class="nav-cta">
+                    Browse Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================
+         MAIN CONTENT
+    =================================== -->
+
+    <main>
+
+        <!-- COURSES HERO -->
+
+        <section class="courses-hero">
+
+            <div class="section-container">
+
+                <div class="courses-hero-content">
+
+                    <span class="section-label">
+                        THE ZERVON LEARNING LIBRARY
+                    </span>
+
+                    <h1>
+                        Explore Your
+                        <span>Learning Journey.</span>
+                    </h1>
+
+                    <p>
+                        Yahan tumhein web development seekhne ke
+                        liye complete courses milenge. Har course
+                        mein detailed lessons, practical examples,
+                        coding exercises aur real projects honge.
+                    </p>
+
+                    <div class="courses-hero-stats">
+
+                        <div>
+                            <strong>08</strong>
+                            <span>Complete Courses</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Beginner Friendly</span>
+                        </div>
+
+                        <div>
+                            <strong>Roman Urdu</strong>
+                            <span>Teaching Language</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALL COURSES -->
+
+        <section class="all-courses-section" id="all-courses">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        COMPLETE COURSE LIBRARY
+                    </span>
+
+                    <h2>
+                        Choose What You Want
+                        <span>To Learn.</span>
+                    </h2>
+
+                    <p>
+                        Apna course select karo aur detailed
+                        lessons ke zariye coding seekhna shuru karo.
+                    </p>
+
+                </div>
+
+
+                <!-- COURSE SEARCH -->
+
+                <div class="course-toolbar">
+
+                    <div class="course-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="courseSearch"
+                            placeholder="Search courses..."
+                            aria-label="Search courses">
+
+                    </div>
+
+
+                    <div class="course-filter">
+
+                        <select id="courseFilter" aria-label="Filter courses">
+
+                            <option value="all">All Courses</option>
+
+                            <option value="Beginner">Beginner</option>
+
+                            <option value="Intermediate">Intermediate</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE GRID -->
+
+                <div class="all-courses-grid" id="allCoursesGrid">
+
+                    <div class="course-loading">
+                        SCROLL DOWN... click HTML and start learning from introduction to coding 1st lesson 
+                    </div>
+
+                </div>
+
+
+                <!-- NO RESULTS MESSAGE -->
+
+                <div class="no-courses" id="noCourses" hidden>
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h3>No Courses Found</h3>
+
+                    <p>
+                        Tumhari search se matching course nahi mila.
+                        Koi doosra keyword try karo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING MESSAGE -->
+
+        <section class="courses-cta">
+
+            <div class="section-container">
+
+                <div class="courses-cta-content">
+
+                    <span class="section-label">
+                        START YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Every Expert Was Once
+                        <span>A Beginner.</span>
+                    </h2>
+
+                    <p>
+                        Aaj se coding seekhna shuru karo.
+                        Consistency aur practice tumhein
+                        ek skilled developer banayegi.
+                    </p>
+
+                    <a href="index.html" class="btn-primary">
+                        Back to Home
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================
+         FOOTER
+    =================================== -->
+
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="index.html">Home</a>
+
+                    <a href="courses.html">All Courses</a>
+
+                    <a href="about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="courses/html.html">HTML</a>
+
+                    <a href="courses/css.html">CSS</a>
+
+                    <a href="courses/javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="courses/github.html">Git & GitHub</a>
+
+                    <a href="courses/deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
