@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Git & GitHub - Git install karna, repository banana, commit, branch aur GitHub par code upload karna Roman Urdu mein step-by-step seekho.">
+
+    <title>Git &amp; GitHub | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="github">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>Git &amp; GitHub</span>
+                </nav>
+
+                <span class="section-label">MODULE 07 · VERSION CONTROL</span>
+
+                <h1>
+                    Git &amp;
+                    <span>GitHub.</span>
+                </h1>
+
+                <p>
+                    Git install karna, repository banana, commits aur branches
+                    samajhna, aur apna code GitHub par upload karna seekho.
+                    Har professional developer ke liye ye buniyadi skill hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 4 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-git">
+
+                            <h2>Git Aur GitHub Kya Hain?</h2>
+
+                            <p>
+                                Ye dono alag cheezein hain, aur log aksar inhein
+                                ek samajh lete hain.
+                            </p>
+
+                            <ul>
+                                <li><strong>Git:</strong> ek tool jo tumhare computer par chalta hai. Ye tumhare code ke har badlaav ko yaad rakhta hai.</li>
+                                <li><strong>GitHub:</strong> ek website jahan tum apna Git wala code online save aur share karte ho.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>MISAAL</strong>
+                                <p>
+                                    Git ko game ka "save point" samjho. Kuch bigar
+                                    jaye to pichle save par wapas ja sakte ho. GitHub
+                                    wo cloud hai jahan ye saare save points mehfooz
+                                    rehte hain, aur dusre log bhi unhein dekh sakte hain.
+                                </p>
+                            </div>
+
+                            <p>
+                                Git ke faide: code ki purani versions wapas mil
+                                jati hain, kai log ek hi project par saath kaam kar
+                                sakte hain, aur tumhara kaam online backup ho jata hai.
+                                GitHub par tumhara profile hi tumhara developer portfolio hota hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="install-git">
+
+                            <h2>Git Install Karna</h2>
+
+                            <ol>
+                                <li>Browser mein <code>git-scm.com</code> kholo aur apne system ka version download karo.</li>
+                                <li>Installer chalao. Zyadatar options default rehne do aur har screen par <strong>Next</strong> dabate jao.</li>
+                                <li>Install hone ke baad VS Code ka terminal kholo (<code>Ctrl + `</code>).</li>
+                                <li>Check karo ke Git install hua ya nahi:</li>
+                            </ol>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git --version</code></pre>
+
+                            </div>
+
+                            <p>
+                                Agar <code>git version 2.xx.x</code> jaisa kuch
+                                likh kar aaye to Git tayyar hai. Agar "not recognized"
+                                aaye to VS Code ko band kar ke dobara kholo.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="git-setup">
+
+                            <h2>Pehli Baar Ki Setting</h2>
+
+                            <p>
+                                Git har badlaav ke saath ye bhi likhta hai ke wo
+                                kis ne kiya. Is liye apna naam aur email ek baar
+                                bata do. Ye sirf ek dafa karna hota hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git config --global user.name "Tumhara Naam"
+git config --global user.email "tumhari-email@example.com"
+git config --global init.defaultBranch main</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>ZAROORI</strong>
+                                <p>
+                                    Yahan wohi email likho jo tum GitHub account
+                                    mein use karoge (ya jo GitHub ki settings mein
+                                    tumhari email hai), taake commits tumhare account
+                                    se jur jayein. Ye email commits mein public bhi
+                                    nazar aa sakti hai, is liye GitHub ka diya hua
+                                    private "noreply" email bhi use kar sakte ho.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="github-account">
+
+                            <h2>GitHub Account Banana</h2>
+
+                            <ol>
+                                <li><code>github.com</code> kholo aur <strong>Sign up</strong> dabao.</li>
+                                <li>Email, password aur username chuno.</li>
+                                <li>Email verify karo.</li>
+                                <li>Account security ke liye <strong>Two-factor authentication (2FA)</strong> zaroor on karo. Ye Settings &rarr; Password and authentication mein hota hai.</li>
+                            </ol>
+
+                            <div class="callout">
+                                <strong>USERNAME KA INTIKHAB</strong>
+                                <p>
+                                    Tumhara username tumhare GitHub link aur
+                                    portfolio ka hissa banega
+                                    (<code>github.com/username</code>), is liye
+                                    professional aur saaf naam rakho. Jaise tumhara
+                                    asli naam.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="core-concepts">
+
+                            <h2>Basic Concepts</h2>
+
+                            <ul>
+                                <li><strong>Repository (repo):</strong> tumhare project ka folder jis ko Git track kar raha hai.</li>
+                                <li><strong>Commit:</strong> ek save point. Har commit ke saath ek chhota message hota hai ke kya badla.</li>
+                                <li><strong>Branch:</strong> code ki ek alag line jis par tum bina mukhya code bigaare naye tajurbe kar sakte ho.</li>
+                                <li><strong>Remote:</strong> repo ki online copy (GitHub par).</li>
+                                <li><strong>Push:</strong> apne commits GitHub par bhejna.</li>
+                                <li><strong>Pull:</strong> GitHub se naye badlaav apne computer par lana.</li>
+                                <li><strong>Clone:</strong> GitHub ke kisi repo ki poori copy apne computer par utarna.</li>
+                            </ul>
+
+                            <p>
+                                Git ka roz ka kaam ye hai: file mein badlaav karo,
+                                badlaav ko <strong>stage</strong> karo (commit ke liye
+                                chuno), <strong>commit</strong> karo, aur phir
+                                <strong>push</strong> karo.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="first-repo">
+
+                            <h2>Pehla Repository Aur Commit</h2>
+
+                            <p>
+                                VS Code mein apna project folder kholo, terminal
+                                kholo aur ye commands ek ek kar ke chalao:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git init                      # is folder ko Git repo banao
+git status                    # dekho kya badla hai
+git add .                     # saare badlaav stage karo
+git commit -m "Pehla commit"  # save point banao
+git log --oneline             # commits ki list dekho</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>git init</code>: folder mein chhupa hua <code>.git</code> folder banata hai. Yahi tumhari history rakhta hai.</li>
+                                <li><code>git status</code>: ye sab se zyada kaam aane wala command hai, jab confuse ho to isay chalao.</li>
+                                <li><code>git add .</code>: current folder ke saare badlaav stage karta hai.</li>
+                                <li><code>git commit -m "..."</code>: stage kiye hue badlaav ko message ke saath save karta hai.</li>
+                            </ul>
+
+                            <h3>Achhe Commit Message Kaise Likhein</h3>
+
+                            <p>
+                                Message mein batao ke <strong>kya badla</strong>, jaise
+                                <code>"Navbar ka mobile menu theek kiya"</code> ya
+                                <code>"Contact form add kiya"</code>. <code>"update"</code>
+                                ya <code>"asdf"</code> jaise messages baad mein kisi kaam
+                                nahi aate.
+                            </p>
+
+                            <div class="callout">
+                                <strong>VS CODE KA TAREEQA</strong>
+                                <p>
+                                    Ye sab VS Code ke <strong>Source Control</strong>
+                                    panel (left bar ka teesra icon, ya
+                                    <code>Ctrl + Shift + G</code>) se bhi ho sakta hai.
+                                    Wahan <strong>Initialize Repository</strong> dabao,
+                                    files ke saamne <strong>+</strong> se stage karo, upar
+                                    message likho aur <strong>Commit</strong> dabao.
+                                    Lekin pehle commands seekho, is se samajh behtar hoti hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="push-to-github">
+
+                            <h2>Code GitHub Par Upload Karna</h2>
+
+                            <h3>Step 1: GitHub Par Khali Repo Banao</h3>
+
+                            <ol>
+                                <li>GitHub mein login kar ke upar right ke <strong>+</strong> par click karo, phir <strong>New repository</strong>.</li>
+                                <li>Repository ka naam likho, jaise <code>my-first-website</code>.</li>
+                                <li><strong>Public</strong> chuno (taake GitHub Pages par publish ho sake).</li>
+                                <li><strong>README, .gitignore aur license ko tick mat karo</strong> (repo bilkul khali ho).</li>
+                                <li><strong>Create repository</strong> dabao.</li>
+                            </ol>
+
+                            <h3>Step 2: Apne Project Ko Us Se Jodo</h3>
+
+                            <p>
+                                Banne ke baad GitHub tumhein ek link dikhayega. Apne
+                                terminal mein ye commands chalao (link apna lagana):
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git branch -M main
+git remote add origin https://github.com/USERNAME/my-first-website.git
+git push -u origin main</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>git branch -M main</code>: mukhya branch ka naam <code>main</code> kar deta hai.</li>
+                                <li><code>git remote add origin ...</code>: GitHub wale repo ko "origin" ke naam se jodta hai.</li>
+                                <li><code>git push -u origin main</code>: code GitHub par bhejta hai. <code>-u</code> sirf pehli dafa lagana hota hai.</li>
+                            </ul>
+
+                            <h3>Login Kaise Hoga?</h3>
+
+                            <p>
+                                Pehli dafa push karte waqt browser mein GitHub
+                                login ki window khulegi. Wahan sign in kar ke
+                                Authorize kar do. Ye Git ke saath aane wale
+                                Credential Manager se hota hai. GitHub ab account
+                                ka normal password terminal mein qabool nahi karta,
+                                is liye agar password maange to browser wala tareeqa
+                                ya <strong>Personal Access Token</strong> use karo
+                                (GitHub Settings &rarr; Developer settings mein banta hai).
+                            </p>
+
+                            <p>
+                                Push hone ke baad GitHub ka page refresh karo,
+                                tumhari saari files wahan nazar aayengi.
+                            </p>
+
+                            <h3>Aage Ke Badlaav Kaise Bhejein</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git add .
+git commit -m "Footer ka design behtar kiya"
+git push</code></pre>
+
+                            </div>
+
+                            <p>
+                                Ab har dafa bas yehi teen commands chalane hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="gitignore">
+
+                            <h2>.gitignore Aur Secrets Ki Hifazat</h2>
+
+                            <p>
+                                Kuch files GitHub par nahi jani chahiye, jaise
+                                passwords, API keys, ya bare faltu folders. Inhein
+                                chupane ke liye project ke main folder mein
+                                <code>.gitignore</code> naam ki file banao:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">.GITIGNORE</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.env
+node_modules/
+.DS_Store
+Thumbs.db
+*.log</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>BOHOT ZAROORI</strong>
+                                <p>
+                                    Public repo mein password, API key ya koi
+                                    bhi secret kabhi mat daalo. Agar galti se chala
+                                    jaye to sirf file hatana kaafi nahi, kyunke wo
+                                    purani history mein rehti hai. Us key ko
+                                    foran badal (revoke) do. Aur jo cheez chhupi
+                                    rehni chahiye wo code mein likhni hi nahi chahiye.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="branches">
+
+                            <h2>Branches</h2>
+
+                            <p>
+                                Branch par tum naya feature alag se bana sakte ho.
+                                Ye theek na chale to <code>main</code> mein koi
+                                nuqsan nahi hota. Theek chale to usay
+                                <code>main</code> mein mila dete hain (merge).
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git branch                  # saari branches dekho
+git switch -c contact-form  # nayi branch banao aur us par jao
+
+# ... yahan code badlo, add aur commit karo ...
+
+git switch main             # wapas main par aao
+git merge contact-form      # contact-form ka kaam main mein mila do
+git branch -d contact-form  # kaam khatam, branch hata do</code></pre>
+
+                            </div>
+
+                            <p>
+                                Branch ko GitHub par bhejne ke liye
+                                <code>git push -u origin contact-form</code> chalao.
+                                Kai log ek saath kaam karte hain to har koi apni
+                                branch banata hai aur phir unhein milaya jata hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="clone-pull">
+
+                            <h2>Clone Aur Pull</h2>
+
+                            <p>
+                                GitHub ka koi bhi project (apna ya kisi aur ka
+                                public) apne computer par utarne ke liye:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git clone https://github.com/USERNAME/my-first-website.git
+cd my-first-website
+code .</code></pre>
+
+                            </div>
+
+                            <p>
+                                Agar tum kisi aur computer par bhi kaam karte ho
+                                ya GitHub par koi badlaav hua hai, to apne
+                                computer ko update karne ke liye:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git pull</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    Kaam shuru karne se pehle <code>git pull</code>
+                                    chalane ki aadat daalo, taake tum purani
+                                    version par kaam na karo.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="useful-commands">
+
+                            <h2>Kaam Aane Wale Commands Aur Ghaltiyan</h2>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git status                    # abhi ki halat
+git diff                      # kya badla hai (stage se pehle)
+git log --oneline             # commits ki chhoti list
+git restore file.html         # file ke na-commit hue badlaav wapas karo
+git restore --staged file.html # stage ki hui file ko wapas hatao</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <strong>"Author identity unknown" ka error:</strong>
+                                    tumne naam aur email set nahi kiya, "Pehli Baar Ki
+                                    Setting" wale hisse ke commands chalao.
+                                </li>
+                                <li>
+                                    <strong>"failed to push some refs":</strong> GitHub par
+                                    kuch aisa hai jo tumhare paas nahi. Pehle
+                                    <code>git pull</code> chalao, phir dobara push karo.
+                                </li>
+                                <li>
+                                    <strong>"not a git repository":</strong> tum us folder mein
+                                    nahi ho jis mein <code>git init</code> chalaya tha.
+                                    VS Code mein sahi folder kholo.
+                                </li>
+                                <li>
+                                    <strong>Commit ke baad file GitHub par nahi dikhi:</strong>
+                                    commit ke baad <code>git push</code> bhi karna hota hai.
+                                </li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    <code>git restore file.html</code> file ke
+                                    na-commit hue badlaav hamesha ke liye mita deta
+                                    hai. Isay chalane se pehle soch lo ke wo badlaav
+                                    tumhein chahiye to nahi.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>Git tumhare computer par code ka history rakhta hai, GitHub usay online save karta hai.</li>
+                                <li>Roz ka kaam: <code>git add .</code>, <code>git commit -m "..."</code>, <code>git push</code>.</li>
+                                <li>Commit message mein saaf likho ke kya badla.</li>
+                                <li>Passwords aur API keys kabhi GitHub par mat daalo, <code>.gitignore</code> use karo.</li>
+                                <li>Branches mein naye tajurbe karo aur theek hone par <code>main</code> mein milao.</li>
+                                <li>Kaam shuru karne se pehle <code>git pull</code> chalao.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Pichle module ke kisi project (landing page ya
+                                    portfolio) ke liye GitHub par repo banao aur code
+                                    push karo. Phir ek chhota badlaav kar ke dobara
+                                    commit aur push karo, aur GitHub par check karo ke
+                                    history mein dono commits nazar aa rahe hain. Agle
+                                    module mein hum isi repo ko GitHub Pages par live
+                                    website bana kar duniya ke saath share karenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

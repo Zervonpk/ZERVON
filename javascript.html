@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="JavaScript Fundamentals - Variables, data types, operators, conditions, loops, functions, arrays, objects aur DOM manipulation Roman Urdu mein detail se seekho.">
+
+    <title>JavaScript Fundamentals | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="javascript">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>JavaScript Fundamentals</span>
+                </nav>
+
+                <span class="section-label">MODULE 05 · PROGRAMMING</span>
+
+                <h1>
+                    JavaScript
+                    <span>Fundamentals.</span>
+                </h1>
+
+                <p>
+                    Variables, data types, operators, conditions, loops,
+                    functions, arrays, objects aur DOM manipulation seekho.
+                    Yahan se tumhari website mein jaan aur interactivity aati hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 12 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-javascript">
+
+                            <h2>JavaScript Kya Hai?</h2>
+
+                            <p>
+                                JavaScript ek programming language hai jo website
+                                mein logic aur interactivity lati hai. Button par
+                                click karne se kuch hona, form check karna, menu
+                                kholna aur band karna, ye sab JavaScript se hota hai.
+                            </p>
+
+                            <div class="callout">
+                                <strong>TEEN LANGUAGES, TEEN KAAM</strong>
+                                <p>
+                                    HTML website ka dhancha banati hai, CSS usay
+                                    sajati hai, aur JavaScript usay harkat deti hai.
+                                    Ye teeno mil kar ek asli website banate hain.
+                                </p>
+                            </div>
+
+                            <p>
+                                JavaScript browser ke andar chalti hai, is liye
+                                tumhein kuch install karne ki zaroorat nahi. Bas
+                                VS Code aur browser kaafi hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="adding-javascript">
+
+                            <h2>JavaScript Ko HTML Mein Lagana</h2>
+
+                            <p>
+                                CSS ki tarah JavaScript bhi alag file mein likhna
+                                behtar hai. <code>js/script.js</code> file banao
+                                aur HTML mein <code>body</code> band hone se pehle link karo.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;body&gt;
+
+    &lt;h1&gt;Mera Page&lt;/h1&gt;
+
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                Ya <code>head</code> mein <code>defer</code> ke sath
+                                bhi laga sakte ho. <code>defer</code> ka matlab hai
+                                ke pehle poora HTML load ho, phir script chale. Hamari
+                                website mein bhi yahi tareeqa use hua hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;script src="js/script.js" defer&gt;&lt;/script&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                Code ka nateeja dekhne ke liye browser mein
+                                <code>F12</code> dabao aur <strong>Console</strong>
+                                tab kholo. Wahan <code>console.log()</code> ka
+                                output aur errors nazar aate hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="variables">
+
+                            <h2>Variables</h2>
+
+                            <p>
+                                Variable ek dibba hai jis mein hum data rakhte hain
+                                aur usay naam dete hain, taake baad mein us naam se
+                                data dobara use kar sakein.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>let name = "Ali";          // badal sakte hain
+const country = "Pakistan"; // kabhi nahi badalta
+
+name = "Ahmed";            // theek hai
+// country = "India";      // error aayega!
+
+console.log(name, country);</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>let</code>: jab value baad mein badalni ho.</li>
+                                <li><code>const</code>: jab value fix rahni ho. Zyadatar yahi use karo.</li>
+                                <li><code>var</code>: purana tareeqa hai, ab use na karo.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>NAAM RAKHNE KE QAWAID</strong>
+                                <p>
+                                    Naam mein space nahi hota aur wo number se shuru
+                                    nahi ho sakta. JavaScript mein <code>studentName</code>
+                                    jaisa style (camelCase) use hota hai. Naam aisa
+                                    rakho jis se pata chale ke us mein kya hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="data-types">
+
+                            <h2>Data Types</h2>
+
+                            <p>
+                                Har data ki ek qisam hoti hai. Sab se zaroori qismein:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const text = "Salam";        // String (likhai)
+const age = 20;               // Number (adad)
+const price = 99.5;           // Number (decimal bhi)
+const isStudent = true;       // Boolean (true ya false)
+let empty = null;             // Null (jaan boojh kar khali)
+let notSet;                   // Undefined (value di hi nahi gayi)
+
+console.log(typeof text);     // "string"
+console.log(typeof age);      // "number"
+console.log(typeof isStudent); // "boolean"</code></pre>
+
+                            </div>
+
+                            <p>
+                                Strings ko jorne ke liye template literals
+                                (backticks) sab se aasan hain:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const name = "Ali";
+const age = 20;
+
+console.log(`Mera naam ${name} hai aur meri umar ${age} saal hai.`);</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="operators">
+
+                            <h2>Operators</h2>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>// Hisaab ke operators
+console.log(10 + 5);   // 15
+console.log(10 - 5);   // 5
+console.log(10 * 5);   // 50
+console.log(10 / 5);   // 2
+console.log(10 % 3);   // 1  (baqi bachne wala hissa)
+
+// Muqabla karne wale operators
+console.log(5 === 5);  // true  (value aur qisam dono barabar)
+console.log(5 !== 3);  // true
+console.log(5 &gt; 3);    // true
+console.log(5 &lt;= 3);   // false
+
+// Logical operators
+console.log(true &amp;&amp; false);  // false (dono true hon)
+console.log(true || false);  // true  (koi ek true ho)
+console.log(!true);          // false (ulta)</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    Muqabla karte waqt hamesha <code>===</code> use
+                                    karo, <code>==</code> nahi. <code>==</code> qisam
+                                    ko khud badal deta hai aur ajeeb nateeje de sakta hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="conditions">
+
+                            <h2>Conditions (If / Else)</h2>
+
+                            <p>
+                                Conditions se program faisla karta hai ke kya karna hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const marks = 72;
+
+if (marks &gt;= 80) {
+    console.log("Grade A");
+} else if (marks &gt;= 60) {
+    console.log("Grade B");
+} else if (marks &gt;= 40) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+// Chhota tareeqa (ternary)
+const result = marks &gt;= 40 ? "Pass" : "Fail";
+console.log(result);</code></pre>
+
+                            </div>
+
+                            <p>
+                                Upar wala code pehli sahi condition par ruk jata
+                                hai, baqi conditions check hi nahi hoti.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="loops">
+
+                            <h2>Loops</h2>
+
+                            <p>
+                                Loop ek kaam ko baar baar karta hai, taake tumhein
+                                wohi code dobara dobara na likhna parre.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>// for loop: 1 se 5 tak
+for (let i = 1; i &lt;= 5; i++) {
+    console.log("Number:", i);
+}
+
+// while loop: jab tak condition sahi ho
+let count = 3;
+while (count &gt; 0) {
+    console.log("Countdown:", count);
+    count--;
+}</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>let i = 1</code>: shuruaat.</li>
+                                <li><code>i &lt;= 5</code>: jab tak ye sahi hai loop chalta rahe.</li>
+                                <li><code>i++</code>: har chakkar ke baad i ko 1 se barhao.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    Agar loop ki condition kabhi galat na ho to
+                                    wo hamesha chalta rahega (infinite loop) aur
+                                    browser atak jayega. Hamesha dekho ke loop
+                                    kahin na kahin khatam ho raha hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="functions">
+
+                            <h2>Functions</h2>
+
+                            <p>
+                                Function code ka ek naam wala hissa hai jo tum jitni
+                                baar chaho dobara use kar sakte ho. Isay ek machine
+                                samjho: kuch cheez andar daalo (parameters), wo
+                                kaam kare aur nateeja (return) wapas de.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>// Function banana
+function greet(name) {
+    return `Salam, ${name}!`;
+}
+
+console.log(greet("Ali"));    // Salam, Ali!
+console.log(greet("Sara"));   // Salam, Sara!
+
+// Arrow function (chhota tareeqa)
+const add = (a, b) =&gt; a + b;
+
+console.log(add(5, 3));       // 8</code></pre>
+
+                            </div>
+
+                            <p>
+                                Function ek baar likho, kai jagah use karo. Isi se
+                                code saaf aur chhota rehta hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="arrays">
+
+                            <h2>Arrays</h2>
+
+                            <p>
+                                Array ek variable mein kai cheezein rakhne ka tareeqa
+                                hai. Har cheez ki ek position (index) hoti hai jo
+                                <strong>0 se shuru</strong> hoti hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const skills = ["HTML", "CSS", "JavaScript"];
+
+console.log(skills[0]);       // HTML
+console.log(skills.length);   // 3
+
+skills.push("Git");           // aakhir mein add
+skills.pop();                 // aakhri item hatao
+
+// Har item par kaam karna
+skills.forEach(skill =&gt; {
+    console.log("Main seekh raha hoon:", skill);
+});
+
+// Naya array banana
+const upper = skills.map(skill =&gt; skill.toUpperCase());
+console.log(upper);           // ["HTML", "CSS", "JAVASCRIPT"]
+
+// Filter karna
+const long = skills.filter(skill =&gt; skill.length &gt; 3);
+console.log(long);            // ["HTML", "JavaScript"]</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="objects">
+
+                            <h2>Objects</h2>
+
+                            <p>
+                                Object mein data <strong>naam: value</strong> ke jodon
+                                ki shakal mein hota hai. Kisi cheez ki puri maloomat
+                                ek jagah rakhne ke liye behtareen hai. Hamare
+                                <code>app.js</code> mein bhi har course ek object hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const student = {
+    name: "Ali",
+    age: 20,
+    skills: ["HTML", "CSS"],
+    isActive: true
+};
+
+console.log(student.name);        // Ali
+console.log(student["age"]);      // 20
+
+student.age = 21;                 // badalna
+student.city = "Multan";          // naya add karna
+
+// Objects ka array (asli projects mein aam hai)
+const courses = [
+    { id: "html", title: "HTML Mastery" },
+    { id: "css",  title: "CSS Mastery" }
+];
+
+console.log(courses[1].title);    // CSS Mastery</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="dom">
+
+                            <h2>DOM Manipulation</h2>
+
+                            <p>
+                                DOM (Document Object Model) browser ka banaya hua HTML
+                                page ka woh roop hai jis ko JavaScript se badla ja
+                                sakta hai. Yahi wo jagah hai jahan JavaScript website
+                                ko zinda karti hai.
+                            </p>
+
+                            <h3>Elements Chunna</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const title = document.getElementById("title");
+const card = document.querySelector(".card");
+const allCards = document.querySelectorAll(".card");
+
+title.textContent = "Naya Heading";       // text badalna
+title.style.color = "gold";               // style badalna
+card.classList.add("active");             // class lagana
+card.classList.remove("active");          // class hatana
+card.classList.toggle("active");          // ho to hatao, na ho to lagao</code></pre>
+
+                            </div>
+
+                            <h3>Naya Element Banana</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const list = document.getElementById("list");
+
+const item = document.createElement("li");
+item.textContent = "Naya item";
+
+list.appendChild(item);</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    User ka likha hua text kabhi <code>innerHTML</code>
+                                    mein mat daalo. Us mein chhupa hua code chal sakta
+                                    hai jo website ko nuqsan pohancha sakta hai. User ke
+                                    text ke liye <code>textContent</code> use karo.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="events">
+
+                            <h2>Events</h2>
+
+                            <p>
+                                Event wo cheez hai jo page par hoti hai: click, typing,
+                                mouse ka upar aana. JavaScript in ka intezar karti hai
+                                aur jawab mein koi kaam karti hai.
+                            </p>
+
+                            <p>
+                                Ye pura chhota sa example hai jo HTML aur JavaScript
+                                ko milata hai. Pehle HTML:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;h2 id="counter"&gt;0&lt;/h2&gt;
+&lt;button id="plus"&gt;Barhao&lt;/button&gt;
+&lt;button id="reset"&gt;Reset&lt;/button&gt;
+
+&lt;script src="js/script.js"&gt;&lt;/script&gt;</code></pre>
+
+                            </div>
+
+                            <p>Phir <code>js/script.js</code> mein:</p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const counter = document.getElementById("counter");
+const plusButton = document.getElementById("plus");
+const resetButton = document.getElementById("reset");
+
+let value = 0;
+
+plusButton.addEventListener("click", () =&gt; {
+    value++;
+    counter.textContent = value;
+});
+
+resetButton.addEventListener("click", () =&gt; {
+    value = 0;
+    counter.textContent = value;
+});</code></pre>
+
+                            </div>
+
+                            <p>
+                                Button dabane par number barhta hai. Ab tum samajh
+                                sakte ho ke hamari course website mein menu ka
+                                button, search box aur copy button kaise kaam
+                                karte hain: yehi cheezein hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>JavaScript website mein interactivity aur logic lati hai.</li>
+                                <li><code>const</code> aur <code>let</code> se variables banate hain, <code>var</code> se bacho.</li>
+                                <li>Muqabla karne ke liye <code>===</code> use karo.</li>
+                                <li>Conditions faisla karti hain, loops kaam dohrate hain.</li>
+                                <li>Functions code ko dobara use karne layak banate hain.</li>
+                                <li>Arrays cheezon ki list aur objects maloomat ka set rakhte hain.</li>
+                                <li>DOM aur events se JavaScript HTML page ko badalti hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Ek chhota "To-Do List" banao: ek input box, ek
+                                    "Add" button aur ek list. Button dabane par input
+                                    ka text list mein naye item ki tarah add ho. Is
+                                    mein variables, functions, DOM aur events sab
+                                    aa jayenge. Agle module mein hum in sab se asli
+                                    projects banayenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

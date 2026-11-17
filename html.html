@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="HTML Mastery - HTML document structure, elements, links, images, lists, tables, forms aur semantic HTML Roman Urdu mein detail se seekho.">
+
+    <title>HTML Mastery | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="html">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>HTML Mastery</span>
+                </nav>
+
+                <span class="section-label">MODULE 03 · WEB DEVELOPMENT</span>
+
+                <h1>
+                    HTML
+                    <span>Mastery.</span>
+                </h1>
+
+                <p>
+                    HTML document structure, elements, attributes, headings,
+                    paragraphs, links, images, lists, tables, forms aur semantic
+                    HTML detail mein seekho. Har website ki buniyad yahi hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 8 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-html">
+
+                            <h2>HTML Kya Hai?</h2>
+
+                            <p>
+                                HTML ka full form <strong>HyperText Markup Language</strong>
+                                hai. Ye website ka dhancha (structure) banati hai.
+                                Heading kahan hogi, paragraph kahan hoga, image
+                                kahan lagegi, ye sab HTML se tay hota hai.
+                            </p>
+
+                            <p>
+                                Ye programming language nahi, markup language hai.
+                                Matlab ye logic nahi chalati, balke browser ko batati
+                                hai ke page par kya cheez kis tarah dikhani hai.
+                            </p>
+
+                            <div class="callout">
+                                <strong>MISAAL</strong>
+                                <p>
+                                    Ghar banate waqt pehle deewarein, darwaze aur
+                                    kamray khare kiye jate hain. HTML wahi deewarein
+                                    aur kamray hain. Rang aur sajawat baad mein CSS
+                                    se ayegi.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="document-structure">
+
+                            <h2>HTML Document Ka Structure</h2>
+
+                            <p>
+                                Har HTML page ka ek basic dhancha hota hai. Isay
+                                yaad kar lo, har page mein yahi hoga:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mera Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, Developer!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>&lt;!DOCTYPE html&gt;</code>: browser ko batata hai ke ye modern HTML5 page hai.</li>
+                                <li><code>&lt;html&gt;</code>: poore page ka main container. <code>lang="en"</code> page ki zubaan batata hai.</li>
+                                <li><code>&lt;head&gt;</code>: page ki maloomat (title, encoding, CSS links). Ye screen par nahi dikhta.</li>
+                                <li><code>&lt;body&gt;</code>: wo sab kuch jo screen par nazar aata hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    <code>viewport</code> wali meta line mobile par website
+                                    sahi dikhane ke liye zaroori hai. Isay kabhi na bhoolna.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="elements-attributes">
+
+                            <h2>Elements Aur Attributes</h2>
+
+                            <p>
+                                HTML <strong>elements</strong> se banti hai. Ek element
+                                mein opening tag, content aur closing tag hota hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;p&gt;Ye ek paragraph hai.&lt;/p&gt;
+
+&lt;!-- opening tag, content, closing tag --&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                Kuch elements ka closing tag nahi hota, jaise
+                                <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>
+                                aur <code>&lt;input&gt;</code>. Inhein void elements kehte hain.
+                            </p>
+
+                            <h3>Attributes</h3>
+
+                            <p>
+                                Attributes element ko extra maloomat dete hain. Ye
+                                hamesha opening tag ke andar <code>naam="value"</code>
+                                ki shakal mein likhe jate hain.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;a href="https://example.com" target="_blank"&gt;Link&lt;/a&gt;
+&lt;p id="intro" class="text-big"&gt;Intro paragraph&lt;/p&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>id</code>: element ka unique naam (ek page par ek hi baar).</li>
+                                <li><code>class</code>: elements ko group karne ka naam (CSS mein kaam aata hai).</li>
+                                <li><code>href</code>, <code>src</code>, <code>alt</code>: link, image ka raasta aur image ki tehreer.</li>
+                            </ul>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="text-elements">
+
+                            <h2>Headings, Paragraphs Aur Text</h2>
+
+                            <p>
+                                HTML mein 6 level ki headings hoti hain. <code>h1</code>
+                                sab se bari aur ahem, <code>h6</code> sab se chhoti.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;h3&gt;Chhoti Heading&lt;/h3&gt;
+
+&lt;p&gt;Ye ek &lt;strong&gt;zaroori&lt;/strong&gt; aur &lt;em&gt;khaas&lt;/em&gt; paragraph hai.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>&lt;p&gt;</code>: paragraph.</li>
+                                <li><code>&lt;strong&gt;</code>: bold aur ahem text.</li>
+                                <li><code>&lt;em&gt;</code>: italic aur zor dene wala text.</li>
+                                <li><code>&lt;br&gt;</code>: nayi line.</li>
+                                <li><code>&lt;hr&gt;</code>: horizontal lakeer.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>YAAD RAKHO</strong>
+                                <p>
+                                    Ek page par <code>h1</code> sirf ek hi rakho aur
+                                    headings ko sahi order mein likho. Heading sirf
+                                    bara text banane ke liye mat use karo, ye search
+                                    engines aur screen readers ke liye bhi zaroori hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="links-images">
+
+                            <h2>Links Aur Images</h2>
+
+                            <h3>Links</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!-- doosri website ka link --&gt;
+&lt;a href="https://www.google.com" target="_blank" rel="noopener"&gt;Google kholo&lt;/a&gt;
+
+&lt;!-- apni website ke doosre page ka link --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- usi page ke kisi hisse ka link --&gt;
+&lt;a href="#contact"&gt;Neeche Contact par jao&lt;/a&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                <code>target="_blank"</code> link ko naye tab mein
+                                kholta hai. Iske sath <code>rel="noopener"</code>
+                                likhna security ke liye achhi aadat hai.
+                            </p>
+
+                            <h3>Images</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;img src="images/photo.jpg" alt="Pahaar ke beech jheel" width="400"&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>src</code>: image ki file ka raasta.</li>
+                                <li><code>alt</code>: image ki tehreer. Image na khule ya screen reader use ho to ye kaam aata hai.</li>
+                                <li><code>width</code> / <code>height</code>: image ka size.</li>
+                            </ul>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="lists">
+
+                            <h2>Lists</h2>
+
+                            <p>
+                                Cheezon ki fehrist banane ke liye lists use hoti hain.
+                                Do qisam ki lists sab se zyada kaam aati hain.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!-- Unordered list (bullets) --&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered list (numbers) --&gt;
+&lt;ol&gt;
+    &lt;li&gt;VS Code install karo&lt;/li&gt;
+    &lt;li&gt;Folder banao&lt;/li&gt;
+    &lt;li&gt;Code likho&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                <code>ul</code> unordered list hai (bullets wali) aur
+                                <code>ol</code> ordered list (numbers wali). Dono mein
+                                har item <code>li</code> ke andar likha jata hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="tables">
+
+                            <h2>Tables</h2>
+
+                            <p>
+                                Data ko rows aur columns mein dikhane ke liye table use hota hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Course&lt;/th&gt;
+            &lt;th&gt;Duration&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;HTML&lt;/td&gt;
+            &lt;td&gt;8 Hours&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;CSS&lt;/td&gt;
+            &lt;td&gt;10 Hours&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>&lt;tr&gt;</code>: ek row.</li>
+                                <li><code>&lt;th&gt;</code>: heading wala cell.</li>
+                                <li><code>&lt;td&gt;</code>: data wala cell.</li>
+                                <li><code>&lt;thead&gt;</code> aur <code>&lt;tbody&gt;</code>: table ko hisson mein baantte hain.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    Table sirf data dikhane ke liye use karo, page ka
+                                    layout banane ke liye nahi. Layout CSS se banta hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="forms">
+
+                            <h2>Forms</h2>
+
+                            <p>
+                                Forms se website user se maloomat leti hai, jaise
+                                naam, email ya message. Ek simple contact form dekho:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;form action="#" method="post"&gt;
+
+    &lt;label for="name"&gt;Naam&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+
+    &lt;label for="level"&gt;Level&lt;/label&gt;
+    &lt;select id="level" name="level"&gt;
+        &lt;option value="beginner"&gt;Beginner&lt;/option&gt;
+        &lt;option value="intermediate"&gt;Intermediate&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Bhejo&lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>&lt;label&gt;</code>: input ka naam. <code>for</code> ki value input ki <code>id</code> se milni chahiye.</li>
+                                <li><code>type</code>: input ki qisam (text, email, password, number, checkbox waghera).</li>
+                                <li><code>required</code>: khaali chhorne par browser khud rok deta hai.</li>
+                                <li><code>name</code>: data ko pehchanne ke liye zaroori hai.</li>
+                            </ul>
+
+                            <p>
+                                Ye form sirf screen par dikhta hai. Data kahan jayega
+                                aur kaise save hoga, ye JavaScript ya kisi server se hota
+                                hai, jo hum aage seekhenge.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="semantic-html">
+
+                            <h2>Semantic HTML</h2>
+
+                            <p>
+                                Semantic ka matlab hai aise tags jin ke naam se hi
+                                unka matlab pata chal jaye. Har cheez ke liye
+                                <code>&lt;div&gt;</code> likhne ke bajaye mukhtalif
+                                hisson ke liye sahi tag use karte hain.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;header&gt;
+    &lt;nav&gt;Menu yahan&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Hamare Courses&lt;/h2&gt;
+        &lt;article&gt;Ek course ki detail&lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;Side ki maloomat&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;Page ka akhri hissa&lt;/footer&gt;</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>&lt;header&gt;</code>: page ya section ka upar wala hissa.</li>
+                                <li><code>&lt;nav&gt;</code>: navigation links.</li>
+                                <li><code>&lt;main&gt;</code>: page ka asal content (ek page par ek hi).</li>
+                                <li><code>&lt;section&gt;</code>: mauzu ke hisaab se alag hissa.</li>
+                                <li><code>&lt;article&gt;</code>: aisa content jo akela bhi samajh aaye.</li>
+                                <li><code>&lt;footer&gt;</code>: page ya section ka neeche wala hissa.</li>
+                            </ul>
+
+                            <p>
+                                Semantic HTML se code saaf padhne ko milta hai, search
+                                engines (SEO) website ko behtar samajhte hain, aur
+                                visually impaired logon ke liye screen readers bhi
+                                sahi kaam karte hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>HTML website ka structure banati hai, design nahi.</li>
+                                <li>Har page mein <code>doctype</code>, <code>html</code>, <code>head</code> aur <code>body</code> hota hai.</li>
+                                <li>Elements tags se bante hain aur attributes unhein extra maloomat dete hain.</li>
+                                <li>Links <code>a</code>, images <code>img</code>, lists <code>ul/ol</code> aur data <code>table</code> se banta hai.</li>
+                                <li>Forms user se input lene ke liye hain.</li>
+                                <li>Semantic tags page ko saaf, SEO-friendly aur accessible banate hain.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Apna ek "About Me" page banao jis mein heading, apni
+                                    photo, apne shaunq ki list, ek chhota table aur ek
+                                    contact form ho. Sab semantic tags ke sath likho. Agle
+                                    module mein hum CSS se isay khoobsurat banayenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

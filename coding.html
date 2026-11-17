@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Introduction to Coding - Programming kya hai, computer instructions kaise samajhta hai, languages aur algorithms Roman Urdu mein seekho.">
+
+    <title>Introduction to Coding | ZERVON Code Academy</title>
+
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="coding">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>Introduction to Coding</span>
+                </nav>
+
+                <span class="section-label">MODULE 01 · FOUNDATION</span>
+
+                <h1>
+                    Introduction to
+                    <span>Coding.</span>
+                </h1>
+
+                <p>
+                    Programming kya hai, computers instructions ko kaise
+                    samajhte hain, programming languages aur algorithms ka
+                    kya role hai. Coding ki complete foundation yahan se shuru hoti hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 2 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-programming">
+
+                            <h2>Programming Kya Hai?</h2>
+
+                            <p>
+                                Programming ka matlab hai computer ko aisi
+                                instructions dena jin ko follow kar ke wo
+                                koi kaam kare. Jaise tum kisi ko recipe likh
+                                kar dete ho ke pehle ye karo, phir wo karo,
+                                waise hi programmer computer ko step-by-step
+                                instructions likh kar deta hai.
+                            </p>
+
+                            <p>
+                                In instructions ke set ko <strong>program</strong>
+                                kehte hain, aur ye instructions likhne ke amal
+                                ko <strong>coding</strong> kehte hain.
+                            </p>
+
+                            <div class="callout">
+                                <strong>REAL LIFE EXAMPLE</strong>
+                                <p>
+                                    Tum jab mobile par calculator app chalate ho,
+                                    to koi programmer pehle se likh chuka hota hai
+                                    ke "2 + 2" likhne par jawab "4" dikhana hai.
+                                    Har app, website aur game isi tarah code se bana hota hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="how-computers-think">
+
+                            <h2>Computer Instructions Kaise Samajhta Hai?</h2>
+
+                            <p>
+                                Computer apne aap kuch nahi sochta. Wo sirf
+                                wohi karta hai jo usay bataya jaye, aur bilkul
+                                waise hi jaise bataya jaye. Is liye instructions
+                                saaf aur sahi order mein honi chahiye.
+                            </p>
+
+                            <ul>
+                                <li>Computer ko <strong>exact</strong> instructions chahiye hoti hain.</li>
+                                <li>Wo instructions ko <strong>upar se neeche</strong> ek ek kar ke chalata hai.</li>
+                                <li>Agar instruction mein ghalti ho to wo ghalti wahi rehti hai jab tak tum theek na karo.</li>
+                            </ul>
+
+                            <p>
+                                Andar se computer sirf <code>0</code> aur
+                                <code>1</code> (binary) samajhta hai. Programming
+                                languages is liye bani hain ke hum insaano ki
+                                zubaan jaise code likh sakein aur computer
+                                usay khud binary mein badal le.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="programming-languages">
+
+                            <h2>Programming Languages</h2>
+
+                            <p>
+                                Jaise insaan alag alag zubanein bolte hain,
+                                waise hi computer ke liye bhi bohot si
+                                programming languages hain. Har language ka
+                                apna kaam aur apni khasiyat hoti hai.
+                            </p>
+
+                            <ul>
+                                <li><strong>HTML:</strong> website ka structure banati hai.</li>
+                                <li><strong>CSS:</strong> website ko design aur styling deti hai.</li>
+                                <li><strong>JavaScript:</strong> website mein interactivity aur logic lati hai.</li>
+                                <li><strong>Python:</strong> automation, data aur AI ke liye mashhoor hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>HAMARA PATH</strong>
+                                <p>
+                                    Is course mein hum web development par focus karenge,
+                                    is liye HTML, CSS aur JavaScript seekhenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="algorithms">
+
+                            <h2>Algorithm Kya Hota Hai?</h2>
+
+                            <p>
+                                Algorithm kisi masle ko hal karne ke steps ka
+                                list hota hai. Code likhne se pehle hum socha
+                                karte hain ke kaam kin steps mein hoga. Ye
+                                sochne ka tareeqa hi asal programming hai.
+                            </p>
+
+                            <h3>Example: Chai Banane Ka Algorithm</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">ALGORITHM</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>1. Pani garam karo
+2. Pani mein chai ki patti dalo
+3. Doodh aur cheeni daalo
+4. 3 minute pakao
+5. Cup mein chhan kar serve karo</code></pre>
+
+                            </div>
+
+                            <p>
+                                Dekho, har step clear hai aur sahi order mein
+                                hai. Computer ke liye bhi hum bilkul aisa hi
+                                plan banate hain, bas code ki zubaan mein.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="first-code">
+
+                            <h2>Tumhara Pehla Code</h2>
+
+                            <p>
+                                Chalo ek chhota sa JavaScript code dekhte hain.
+                                Ye code screen par ek message dikhata hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>console.log("Hello, World!");
+console.log("Main coding seekh raha hoon.");</code></pre>
+
+                            </div>
+
+                            <p>
+                                Yahan <code>console.log()</code> ek instruction hai
+                                jo brackets ke andar likha text screen (console)
+                                par dikhata hai. Computer ye dono lines upar se
+                                neeche ek ek kar ke chalayega.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="basic-concepts">
+
+                            <h2>Coding Ke Basic Concepts</h2>
+
+                            <p>
+                                Har programming language mein kuch common
+                                concepts hote hain. Inhein ek baar samajh liya
+                                to koi bhi language seekhna aasan ho jata hai.
+                            </p>
+
+                            <ul>
+                                <li><strong>Variables:</strong> data ko naam de kar store karna.</li>
+                                <li><strong>Conditions:</strong> faisla karna ke agar ye ho to wo karo (if / else).</li>
+                                <li><strong>Loops:</strong> ek kaam ko baar baar dohrana.</li>
+                                <li><strong>Functions:</strong> code ka ek hissa jo dobara dobara use ho sake.</li>
+                            </ul>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>let age = 20;                      // variable
+
+if (age >= 18) {                   // condition
+    console.log("Tum adult ho.");
+} else {
+    console.log("Tum abhi minor ho.");
+}
+
+for (let i = 1; i <= 3; i++) {     // loop
+    console.log("Number:", i);
+}</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>Programming computer ko instructions dene ka amal hai.</li>
+                                <li>Computer sirf wohi karta hai jo usay exact bataya jaye.</li>
+                                <li>Programming languages insaan aur computer ke beech pul hain.</li>
+                                <li>Algorithm pehle sochna hai, code baad mein likhna hai.</li>
+                                <li>Variables, conditions, loops aur functions har language ki buniyad hain.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Apni rozmarra ki koi cheez chuno (jaise
+                                    paratha banana ya school jana) aur uska
+                                    algorithm steps mein likho. Phir agle module
+                                    mein hum VS Code install kar ke asli coding shuru karenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

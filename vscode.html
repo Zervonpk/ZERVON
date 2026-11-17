@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Visual Studio Code - VS Code installation, extensions, themes, settings aur terminal Roman Urdu mein seekho aur professional coding environment banao.">
+
+    <title>Visual Studio Code | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="vscode">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>Visual Studio Code</span>
+                </nav>
+
+                <span class="section-label">MODULE 02 · DEVELOPMENT TOOLS</span>
+
+                <h1>
+                    Visual Studio
+                    <span>Code.</span>
+                </h1>
+
+                <p>
+                    VS Code install karna, extensions, themes, settings aur
+                    terminal use karna seekho. Is module ke end tak tumhara
+                    professional coding environment tayyar hoga.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 2 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-vscode">
+
+                            <h2>VS Code Kya Hai?</h2>
+
+                            <p>
+                                Visual Studio Code (VS Code) ek free code editor
+                                hai jo Microsoft ne banaya hai. Isme hum code
+                                likhte hain, files manage karte hain aur apne
+                                projects chalate hain. Aaj duniya ke zyadatar
+                                web developers isi ko use karte hain.
+                            </p>
+
+                            <p>
+                                Tum Notepad mein bhi code likh sakte ho, lekin
+                                VS Code tumhein colors, auto-complete, error
+                                ki nishandahi aur bohot si tools deta hai jis se
+                                coding tez aur aasan ho jati hai.
+                            </p>
+
+                            <div class="callout">
+                                <strong>YAAD RAKHO</strong>
+                                <p>
+                                    VS Code aur Visual Studio dono alag cheezein hain.
+                                    Hum yahan sirf <strong>Visual Studio Code</strong>
+                                    (neela icon) install karenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="install-vscode">
+
+                            <h2>VS Code Install Karna</h2>
+
+                            <ol>
+                                <li>Browser mein <code>code.visualstudio.com</code> kholo.</li>
+                                <li>Apne system ke hisaab se Download button dabao (Windows, Mac ya Linux).</li>
+                                <li>Downloaded file chalao aur installation shuru karo.</li>
+                                <li>Windows par "Select Additional Tasks" screen par ye options <strong>zaroor tick</strong> karo:
+                                    <ul>
+                                        <li>Add "Open with Code" action to Windows Explorer file context menu</li>
+                                        <li>Add "Open with Code" action to Windows Explorer directory context menu</li>
+                                        <li>Add to PATH</li>
+                                    </ul>
+                                </li>
+                                <li>Install complete hone par VS Code open karo.</li>
+                            </ol>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    "Open with Code" option tick karne se kisi bhi folder
+                                    par right-click kar ke seedha VS Code mein khol sakte ho.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="interface">
+
+                            <h2>VS Code Ka Interface</h2>
+
+                            <p>
+                                VS Code kholte hi tumhein kuch hisse nazar aayenge.
+                                Inhein pehchan lo, bar bar kaam aayenge.
+                            </p>
+
+                            <ul>
+                                <li><strong>Activity Bar (left ki patti):</strong> Explorer, Search, Source Control aur Extensions ke icons.</li>
+                                <li><strong>Explorer:</strong> tumhare project ki files aur folders yahan dikhte hain.</li>
+                                <li><strong>Editor:</strong> beech ka bara hissa jahan tum code likhte ho.</li>
+                                <li><strong>Terminal (neeche):</strong> commands chalane ki jagah.</li>
+                                <li><strong>Status Bar (sab se neeche):</strong> file ki language aur line number jaisi maloomat.</li>
+                            </ul>
+
+                            <h3>Zaroori Shortcuts</h3>
+
+                            <ul>
+                                <li><code>Ctrl + S</code>: file save karna</li>
+                                <li><code>Ctrl + Shift + X</code>: extensions kholna</li>
+                                <li><code>Ctrl + `</code>: terminal kholna ya band karna</li>
+                                <li><code>Ctrl + ,</code>: settings kholna</li>
+                                <li><code>Ctrl + Shift + P</code>: command palette (har command yahan se chalta hai)</li>
+                                <li><code>Ctrl + /</code>: line ko comment karna</li>
+                            </ul>
+
+                            <p>
+                                Mac par <code>Ctrl</code> ki jagah <code>Cmd</code> use karo.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="extensions">
+
+                            <h2>Zaroori Extensions</h2>
+
+                            <p>
+                                Extensions VS Code mein nayi khasiyatein add karte
+                                hain. <code>Ctrl + Shift + X</code> dabao, search
+                                box mein naam likho aur <strong>Install</strong> dabao.
+                                Shuru ke liye ye teen kaafi hain:
+                            </p>
+
+                            <ul>
+                                <li><strong>Live Server:</strong> website ko browser mein chalata hai aur file save karte hi page khud refresh ho jata hai.</li>
+                                <li><strong>Prettier - Code formatter:</strong> code ko khud saaf aur sahi tareeqe se arrange karta hai.</li>
+                                <li><strong>Material Icon Theme:</strong> files ke liye khoobsurat icons deta hai (zaroori nahi, lekin achha lagta hai).</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    Bohot zyada extensions install mat karo, VS Code
+                                    sust ho sakta hai. Sirf wohi lo jinki zaroorat ho,
+                                    aur install karne se pehle publisher ka naam aur
+                                    downloads ki tadaad zaroor dekho.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="themes-settings">
+
+                            <h2>Themes Aur Settings</h2>
+
+                            <p>
+                                Theme VS Code ke colors badalti hai. <code>Ctrl + K</code>
+                                dabao, phir <code>Ctrl + T</code>, aur list mein se
+                                koi bhi theme chuno. Dark themes aankhon ke liye
+                                aasan hoti hain.
+                            </p>
+
+                            <h3>Behtareen Settings</h3>
+
+                            <p>
+                                <code>Ctrl + Shift + P</code> dabao, "Open User Settings (JSON)"
+                                likho aur Enter dabao. Phir ye settings add karo (pehle se likhi
+                                cheezein na mitao, sirf in lines ko curly brackets ke andar daalo):
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JSON</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>"editor.fontSize": 16,
+"editor.wordWrap": "on",
+"editor.formatOnSave": true,
+"files.autoSave": "afterDelay"</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>fontSize</code>: code ke akhsar ka size.</li>
+                                <li><code>wordWrap</code>: lambi line screen se bahar na jaye.</li>
+                                <li><code>formatOnSave</code>: save karte hi code khud saaf ho jaye (Prettier ke sath).</li>
+                                <li><code>autoSave</code>: file khud save hoti rahe.</li>
+                            </ul>
+
+                            <p>
+                                <code>formatOnSave</code> ke liye Prettier extension
+                                install honi chahiye, aur settings mein usay default
+                                formatter chunna hoga.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="terminal">
+
+                            <h2>VS Code Ka Terminal</h2>
+
+                            <p>
+                                Terminal mein hum text commands likh kar computer
+                                se kaam karwate hain. VS Code ke andar hi terminal
+                                hota hai, <code>Ctrl + `</code> dabane se khulta hai.
+                                Aur ye hamesha usi folder mein khulta hai jo tumne
+                                VS Code mein open kiya ho.
+                            </p>
+
+                            <h3>Basic Commands</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>cd my-website        # folder ke andar jana
+cd ..                # ek folder peeche aana
+mkdir images         # naya folder banana
+code .               # current folder ko VS Code mein kholna
+clear                # terminal saaf karna</code></pre>
+
+                            </div>
+
+                            <p>
+                                Files ki list dekhne ke liye Windows (Command Prompt) mein
+                                <code>dir</code> aur Mac/Linux mein <code>ls</code> chalao.
+                                Agle modules mein hum isi terminal se Git bhi use karenge.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="first-project">
+
+                            <h2>Pehla Project Banao</h2>
+
+                            <ol>
+                                <li>Apne computer par ek naya folder banao, jaise <code>my-first-website</code>.</li>
+                                <li>VS Code mein <strong>File &rarr; Open Folder</strong> se wo folder kholo.</li>
+                                <li>Explorer mein <strong>New File</strong> dabao aur naam likho <code>index.html</code>.</li>
+                                <li>File mein <code>!</code> likho aur <code>Tab</code> dabao, HTML ka basic structure khud ban jayega.</li>
+                                <li>Body ke andar ek heading likho aur save karo.</li>
+                                <li>File par right-click karo aur <strong>Open with Live Server</strong> chuno.</li>
+                            </ol>
+
+                            <p>
+                                Tumhara code kuch aisa dikhna chahiye:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, Developer!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                            </div>
+
+                            <p>
+                                Browser mein tumhara page khul jayega. Ab
+                                heading ka text badal kar save karo, page
+                                khud update ho jayega.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>VS Code ek free aur mashhoor code editor hai.</li>
+                                <li>Install karte waqt "Open with Code" aur "Add to PATH" tick karo.</li>
+                                <li>Live Server aur Prettier shuru ke liye behtareen extensions hain.</li>
+                                <li>Settings se font, auto save aur formatting apni pasand ki bana sakte ho.</li>
+                                <li>Terminal VS Code ke andar hi hota hai, <code>Ctrl + `</code> se khulta hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Naya folder bana kar uske andar <code>index.html</code>
+                                    banao, apna naam heading mein likho aur Live Server se
+                                    browser mein dekho. Agla module HTML ka hai, jahan hum
+                                    asli website banana shuru karenge.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

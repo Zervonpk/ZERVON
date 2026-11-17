@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="CSS Mastery - Selectors, colors, typography, box model, Flexbox, Grid, animations aur responsive web design Roman Urdu mein detail se seekho.">
+
+    <title>CSS Mastery | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="css">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>CSS Mastery</span>
+                </nav>
+
+                <span class="section-label">MODULE 04 · WEB DESIGN</span>
+
+                <h1>
+                    CSS
+                    <span>Mastery.</span>
+                </h1>
+
+                <p>
+                    Selectors, colors, typography, box model, Flexbox, Grid,
+                    transitions aur responsive design seekho. HTML ke dhanche ko
+                    khoobsurat aur professional website mein badalna yahan se shuru hota hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 10 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-css">
+
+                            <h2>CSS Kya Hai?</h2>
+
+                            <p>
+                                CSS ka full form <strong>Cascading Style Sheets</strong>
+                                hai. HTML website ka dhancha banati hai, aur CSS us
+                                dhanche ko rang, size, spacing aur layout deti hai.
+                            </p>
+
+                            <div class="callout">
+                                <strong>MISAAL</strong>
+                                <p>
+                                    Agar HTML ghar ki deewarein hain, to CSS us ka rang,
+                                    farsh, furniture ki jagah aur sajawat hai. Wohi
+                                    HTML CSS ke sath bilkul alag nazar aati hai.
+                                </p>
+                            </div>
+
+                            <p>
+                                CSS ka basic tareeqa ye hai: pehle batao <strong>kis
+                                element</strong> par asar dalna hai (selector), phir
+                                batao <strong>kya badalna</strong> hai (property aur value).
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>h1 {
+    color: gold;
+    font-size: 40px;
+}
+
+/* h1       = selector
+   color    = property
+   gold     = value */</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="adding-css">
+
+                            <h2>CSS Ko HTML Mein Kaise Lagayein?</h2>
+
+                            <p>
+                                CSS lagane ke teen tareeqe hain. Professional projects
+                                mein hamesha pehla tareeqa use hota hai.
+                            </p>
+
+                            <h3>1. External CSS (sab se behtar)</h3>
+
+                            <p>
+                                Alag <code>style.css</code> file banao aur HTML ke
+                                <code>head</code> mein link kar do. Ek file se poori
+                                website ka design control hota hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;</code></pre>
+
+                            </div>
+
+                            <h3>2. Internal CSS</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;style&gt;
+    p { color: gray; }
+&lt;/style&gt;</code></pre>
+
+                            </div>
+
+                            <h3>3. Inline CSS</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;p style="color: red;"&gt;Ye text laal hai&lt;/p&gt;</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    Inline CSS sirf bohot chhoti testing ke liye theek
+                                    hai. Asli projects mein external CSS hi use karo,
+                                    is se code saaf rehta hai aur dobara dobara likhna nahi parta.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="selectors">
+
+                            <h2>Selectors</h2>
+
+                            <p>
+                                Selector batata hai ke CSS kis element par lagegi.
+                                Ye CSS ka sab se zaroori hissa hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>/* Element selector: sab paragraphs */
+p { color: gray; }
+
+/* Class selector: class="card" wale */
+.card { padding: 20px; }
+
+/* ID selector: id="logo" wala */
+#logo { font-size: 30px; }
+
+/* Descendant: card ke andar ke sab p */
+.card p { margin: 0; }
+
+/* Child: sirf seedhe bachay */
+ul &gt; li { list-style: none; }
+
+/* Group: kai selectors ek sath */
+h1, h2, h3 { font-family: sans-serif; }
+
+/* Pseudo-class: mouse upar aaye to */
+a:hover { color: gold; }</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>.naam</code> class ke liye (dot lagta hai). Ye sab se zyada use hota hai.</li>
+                                <li><code>#naam</code> id ke liye (hash lagta hai). Ek page par ek hi baar.</li>
+                                <li><code>:hover</code>, <code>:focus</code> special states ke liye hain.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>YAAD RAKHO</strong>
+                                <p>
+                                    Agar do rules aapas mein takraein to jo zyada
+                                    <strong>specific</strong> ho wo jeet'ta hai (id class se
+                                    taqatwar, class element se taqatwar). Barabar hone par
+                                    file mein jo baad mein likha ho wo lagta hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="colors-typography">
+
+                            <h2>Colors Aur Typography</h2>
+
+                            <h3>Colors</h3>
+
+                            <p>
+                                CSS mein colors kai tareeqon se likhe ja sakte hain:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.box {
+    color: red;                           /* naam */
+    background: #d8b477;                  /* hex code */
+    border-color: rgb(216, 180, 119);     /* rgb */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* rgba: transparency ke sath */
+}</code></pre>
+
+                            </div>
+
+                            <h3>Typography</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-transform: none;
+}</code></pre>
+
+                            </div>
+
+                            <p>
+                                <code>font-family</code> mein hamesha aakhir mein
+                                <code>sans-serif</code> jaisa backup font likho, taake
+                                pehla font load na ho to bhi page theek dikhe.
+                                <code>line-height: 1.6</code> paragraph ko padhne mein aasan banata hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="box-model">
+
+                            <h2>Box Model</h2>
+
+                            <p>
+                                HTML ka har element ek dibbe (box) ki tarah hota hai.
+                                Is dibbe ke 4 hisse hain, andar se bahar:
+                            </p>
+
+                            <ul>
+                                <li><strong>Content:</strong> asal text ya image.</li>
+                                <li><strong>Padding:</strong> content ke gird andar ki khali jagah.</li>
+                                <li><strong>Border:</strong> dibbe ki lakeer.</li>
+                                <li><strong>Margin:</strong> dibbe ke bahar doosre elements se faasla.</li>
+                            </ul>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>* {
+    box-sizing: border-box;   /* padding aur border width ke andar hi ginti hon */
+}
+
+.card {
+    width: 300px;
+    padding: 20px;            /* chaaron taraf 20px */
+    border: 1px solid #333;
+    margin: 0 auto 30px;      /* upar 0, left-right auto (beech mein), neeche 30px */
+}</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    <code>box-sizing: border-box</code> har project ki
+                                    shuruat mein laga do. Is se sizes ka hisaab bohot
+                                    aasan ho jata hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="display-position">
+
+                            <h2>Display Aur Position</h2>
+
+                            <h3>Display</h3>
+
+                            <ul>
+                                <li><code>block</code>: poori line leta hai (div, p, h1).</li>
+                                <li><code>inline</code>: sirf utni jagah leta hai jitni zaroori ho (span, a).</li>
+                                <li><code>inline-block</code>: line mein rehta hai lekin width aur height le sakta hai.</li>
+                                <li><code>none</code>: element ko chhupa deta hai.</li>
+                            </ul>
+
+                            <h3>Position</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.parent {
+    position: relative;      /* bachon ka reference point */
+}
+
+.badge {
+    position: absolute;      /* parent ke hisaab se jagah */
+    top: 10px;
+    right: 10px;
+}
+
+.navbar {
+    position: sticky;        /* scroll par upar chipak jata hai */
+    top: 0;
+}
+
+.chat-button {
+    position: fixed;         /* screen par hamesha ek hi jagah */
+    bottom: 20px;
+    right: 20px;
+}</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="flexbox">
+
+                            <h2>Flexbox</h2>
+
+                            <p>
+                                Flexbox elements ko ek line (row) ya ek column mein
+                                saaf tareeqe se arrange karne ke liye hai. Navbar,
+                                buttons ki qatar aur cards ke liye perfect hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.navbar {
+    display: flex;                   /* flexbox shuru */
+    justify-content: space-between;  /* main direction mein jagah */
+    align-items: center;             /* doosri direction mein beech mein */
+    gap: 20px;                       /* elements ke beech faasla */
+}
+
+.column-layout {
+    display: flex;
+    flex-direction: column;          /* upar se neeche */
+    flex-wrap: wrap;                 /* jagah kam ho to agli line par */
+}</code></pre>
+
+                            </div>
+
+                            <ul>
+                                <li><code>justify-content</code>: elements ko main direction (row mein left-right) mein baantta hai.</li>
+                                <li><code>align-items</code>: doosri direction (row mein upar-neeche) mein align karta hai.</li>
+                                <li><code>gap</code>: items ke beech ka faasla.</li>
+                            </ul>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="grid">
+
+                            <h2>CSS Grid</h2>
+
+                            <p>
+                                Grid rows aur columns dono mein layout banane ke
+                                liye hai. Cards ki gallery ya poore page ka dhancha
+                                banane ke liye behtareen hai.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 barabar columns */
+    gap: 20px;
+}
+
+/* Khud-ba-khud adjust hone wala grid */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>FARQ</strong>
+                                <p>
+                                    <strong>Flexbox</strong> ek direction (ek line ya
+                                    ek column) ke liye hai. <strong>Grid</strong> do
+                                    direction (rows aur columns) ke liye. Aksar dono
+                                    ek hi project mein saath use hote hain.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="transitions">
+
+                            <h2>Transitions Aur Animations</h2>
+
+                            <h3>Transition</h3>
+
+                            <p>
+                                Transition kisi cheez ko ek halat se doosri halat
+                                mein narmi se badalta hai, jaise mouse upar lane par button ka rang.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.button {
+    background: #d8b477;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #f4d6a0;
+    transform: translateY(-4px);
+}</code></pre>
+
+                            </div>
+
+                            <h3>Animation</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeUp 0.8s ease both;
+}</code></pre>
+
+                            </div>
+
+                            <p>
+                                Animation ko bohot zyada mat bharo. Halki aur
+                                maqsad wali animations website ko professional
+                                dikhati hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="responsive-design">
+
+                            <h2>Responsive Design</h2>
+
+                            <p>
+                                Aaj zyadatar log website mobile par dekhte hain.
+                                Responsive design ka matlab hai ke website har
+                                screen (mobile, tablet, laptop) par theek dikhe.
+                            </p>
+
+                            <ol>
+                                <li>HTML mein viewport meta tag lagao (pichle module mein seekha).</li>
+                                <li>Fixed pixel ki jagah <code>%</code>, <code>rem</code>, <code>max-width</code> use karo.</li>
+                                <li>Media queries se alag screen size ke liye alag CSS likho.</li>
+                            </ol>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>img {
+    max-width: 100%;     /* image screen se bahar na jaye */
+    height: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1050px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 760px) {
+    .cards { grid-template-columns: 1fr; }
+}</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>TIP</strong>
+                                <p>
+                                    Apni website ko Chrome mein <code>F12</code> daba
+                                    kar mobile mode (device toolbar) mein test karo.
+                                    Chhoti screen se shuru kar ke bari screen ke liye
+                                    design karna (mobile-first) bhi ek achha tareeqa hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>CSS HTML ko rang, spacing aur layout deti hai.</li>
+                                <li>Hamesha external <code>style.css</code> file use karo.</li>
+                                <li>Selectors (element, class, id) batate hain CSS kis par lagegi.</li>
+                                <li>Box model: content, padding, border aur margin.</li>
+                                <li>Flexbox ek direction ke liye, Grid rows aur columns dono ke liye.</li>
+                                <li>Transitions aur animations website ko zinda banate hain.</li>
+                                <li>Media queries website ko har screen par theek dikhate hain.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Pichle module mein jo "About Me" page banaya tha
+                                    usay <code>style.css</code> se design karo: ek
+                                    navbar (Flexbox), cards ki gallery (Grid), hover
+                                    effects aur mobile ke liye media query. Agla
+                                    module JavaScript ka hai jahan page mein jaan aayegi.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

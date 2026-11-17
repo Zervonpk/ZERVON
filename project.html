@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Real World Projects - Landing page, portfolio aur calculator jaise asli projects step-by-step Roman Urdu mein banao.">
+
+    <title>Real World Projects | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="projects">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>Real World Projects</span>
+                </nav>
+
+                <span class="section-label">MODULE 06 · PRACTICAL LEARNING</span>
+
+                <h1>
+                    Real World
+                    <span>Projects.</span>
+                </h1>
+
+                <p>
+                    Ab tak jo seekha usay asli projects mein lagao. Landing
+                    page, portfolio aur calculator step-by-step banao, aur
+                    seekho ke ek complete responsive website kaise banti hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 8 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="how-to-learn">
+
+                            <h2>Projects Se Kaise Seekhein?</h2>
+
+                            <p>
+                                Coding sirf padhne se nahi aati, banane se aati hai.
+                                Tutorial dekh kar samajh aa jata hai, lekin jab
+                                khud khali file se shuru karte ho tab asli seekhna
+                                hota hai. Is module mein hum teen projects banayenge
+                                aur har ek mein pichle modules ki skills use hongi.
+                            </p>
+
+                            <ul>
+                                <li><strong>Landing Page:</strong> HTML aur CSS (structure, layout, responsive).</li>
+                                <li><strong>Portfolio:</strong> HTML, CSS aur thora JavaScript.</li>
+                                <li><strong>Calculator:</strong> HTML, CSS aur JavaScript ki logic.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>SAB SE ZAROORI AADAT</strong>
+                                <p>
+                                    Code copy paste mat karo, har line khud type karo.
+                                    Phir usme apni tarah se cheezein badlo: rang,
+                                    text, layout. Ghalti hogi to Console (F12) mein
+                                    error dekho. Ghaltiyon se hi seekhna hota hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="project-structure">
+
+                            <h2>Project Ka Folder Structure</h2>
+
+                            <p>
+                                Har project ek alag folder mein banao aur files
+                                ko saaf tareeqe se rakho. Isay VS Code mein
+                                <strong>File &rarr; Open Folder</strong> se kholo.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">STRUCTURE</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>my-project/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── images/</code></pre>
+
+                            </div>
+
+                            <p>
+                                Folder aur files ke naam chhote haroof (lowercase)
+                                mein rakho aur space ki jagah <code>-</code> use karo,
+                                jaise <code>my-photo.jpg</code>. Ye GitHub Pages par
+                                publish karte waqt masle se bachata hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="landing-page">
+
+                            <h2>Project 1: Landing Page</h2>
+
+                            <p>
+                                Landing page kisi ek product ya service ka
+                                taaruf karwane wala page hota hai. Isme navbar,
+                                hero (bara heading aur button), features aur
+                                footer hota hai.
+                            </p>
+
+                            <h3>Step 1: HTML (index.html)</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mera Product&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header class="navbar"&gt;
+        &lt;a href="#" class="logo"&gt;Brand&lt;/a&gt;
+        &lt;nav&gt;
+            &lt;a href="#features"&gt;Features&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+
+        &lt;section class="hero"&gt;
+            &lt;h1&gt;Apna Kaam Tez Aur Aasan Banao&lt;/h1&gt;
+            &lt;p&gt;Ek line mein batao ke tumhara product kya masla hal karta hai.&lt;/p&gt;
+            &lt;a href="#contact" class="btn"&gt;Abhi Shuru Karo&lt;/a&gt;
+        &lt;/section&gt;
+
+        &lt;section class="features" id="features"&gt;
+            &lt;article class="feature-card"&gt;
+                &lt;h3&gt;Tez&lt;/h3&gt;
+                &lt;p&gt;Chand second mein kaam shuru karo.&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;article class="feature-card"&gt;
+                &lt;h3&gt;Aasan&lt;/h3&gt;
+                &lt;p&gt;Koi mushkil setup nahi, seedha istemal karo.&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;article class="feature-card"&gt;
+                &lt;h3&gt;Mehfooz&lt;/h3&gt;
+                &lt;p&gt;Tumhara data tumhare paas rehta hai.&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+
+    &lt;/main&gt;
+
+    &lt;footer id="contact"&gt;
+        &lt;p&gt;© 2026 Brand. Rabta: hello@example.com&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                            </div>
+
+                            <h3>Step 2: CSS (css/style.css)</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>:root {
+    --bg: #0b0d12;
+    --card: #151820;
+    --gold: #d8b477;
+    --text: #f5f5f5;
+    --muted: #a0a5b1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: var(--text);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.navbar nav a {
+    margin-left: 24px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 8%;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 520px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 26px;
+    background: var(--gold);
+    color: #111;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 60px 8%;
+}
+
+.feature-card {
+    padding: 28px;
+    background: var(--card);
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid #222;
+}</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>ZARA SOCHO</strong>
+                                <p>
+                                    Is CSS mein <code>repeat(auto-fit, minmax(240px, 1fr))</code>
+                                    ki wajah se media query ke baghair hi features
+                                    mobile par khud ek ke neeche ek aa jate hain.
+                                    Ye Grid ki taqat hai jo tumne CSS module mein seekhi.
+                                </p>
+                            </div>
+
+                            <p>
+                                <strong>Apna kaam:</strong> brand ka naam, text aur
+                                rang badlo, ek chauthi feature card add karo, aur
+                                hero mein ek image ya icon lagao.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="portfolio">
+
+                            <h2>Project 2: Personal Portfolio</h2>
+
+                            <p>
+                                Portfolio tumhari apni website hai jo logon ko
+                                batati hai ke tum kaun ho aur kya banate ho. Ye
+                                job ya clients ke liye sab se bara hathiyar hai.
+                                Is mein ye hisse hone chahiye:
+                            </p>
+
+                            <ol>
+                                <li><strong>Hero:</strong> tumhara naam aur ek line mein tum kya karte ho.</li>
+                                <li><strong>About:</strong> chhota sa taaruf aur tumhari skills.</li>
+                                <li><strong>Projects:</strong> tumhare banaye hue kaam ki cards (neeche dekho).</li>
+                                <li><strong>Contact:</strong> email ya social links.</li>
+                            </ol>
+
+                            <h3>Projects Section</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;section class="projects" id="projects"&gt;
+    &lt;h2&gt;Mere Projects&lt;/h2&gt;
+
+    &lt;div class="project-grid"&gt;
+
+        &lt;article class="project-card"&gt;
+            &lt;h3&gt;Landing Page&lt;/h3&gt;
+            &lt;p&gt;HTML aur CSS se banaya hua responsive page.&lt;/p&gt;
+            &lt;a href="https://github.com/username/landing-page" target="_blank" rel="noopener"&gt;GitHub par dekho&lt;/a&gt;
+        &lt;/article&gt;
+
+        &lt;article class="project-card"&gt;
+            &lt;h3&gt;Calculator&lt;/h3&gt;
+            &lt;p&gt;JavaScript se banaya hua simple calculator.&lt;/p&gt;
+            &lt;a href="https://github.com/username/calculator" target="_blank" rel="noopener"&gt;GitHub par dekho&lt;/a&gt;
+        &lt;/article&gt;
+
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                            </div>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.projects {
+    padding: 80px 8%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    padding: 26px;
+    background: #151820;
+    border: 1px solid #222;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #d8b477;
+}
+
+.project-card a {
+    color: #d8b477;
+    font-size: 14px;
+}</code></pre>
+
+                            </div>
+
+                            <h3>JavaScript Ka Touch: Dark / Light Mode</h3>
+
+                            <p>
+                                Ek button lagao jo page ka theme badle. HTML mein
+                                <code>&lt;button id="themeToggle"&gt;Theme&lt;/button&gt;</code>
+                                likho, phir script mein:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () =&gt; {
+    document.body.classList.toggle("light");
+});</code></pre>
+
+                            </div>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>body.light {
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+}</code></pre>
+
+                            </div>
+
+                            <p>
+                                Ye is liye kaam karta hai ke tumhare rang CSS
+                                variables mein hain. <code>light</code> class lagte
+                                hi variables ki values badal jati hain aur poora
+                                page naye rang le leta hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="calculator">
+
+                            <h2>Project 3: Calculator</h2>
+
+                            <p>
+                                Calculator logic seekhne ke liye behtareen project
+                                hai. Ye JavaScript ke variables, functions, conditions
+                                aur events sab ko ek saath use karwata hai.
+                            </p>
+
+                            <h3>Step 1: HTML</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;div class="calculator"&gt;
+
+    &lt;div class="display" id="display"&gt;0&lt;/div&gt;
+
+    &lt;div class="keys"&gt;
+        &lt;button class="calc-btn" data-value="C"&gt;C&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="/"&gt;÷&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="*"&gt;×&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="-"&gt;−&lt;/button&gt;
+
+        &lt;button class="calc-btn" data-value="7"&gt;7&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="8"&gt;8&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="9"&gt;9&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="+"&gt;+&lt;/button&gt;
+
+        &lt;button class="calc-btn" data-value="4"&gt;4&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="5"&gt;5&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="6"&gt;6&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="="&gt;=&lt;/button&gt;
+
+        &lt;button class="calc-btn" data-value="1"&gt;1&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="2"&gt;2&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="3"&gt;3&lt;/button&gt;
+        &lt;button class="calc-btn" data-value="0"&gt;0&lt;/button&gt;
+
+        &lt;button class="calc-btn" data-value="."&gt;.&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src="js/script.js"&gt;&lt;/script&gt;</code></pre>
+
+                            </div>
+
+                            <h3>Step 2: CSS</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">CSS</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>.calculator {
+    width: min(100% - 32px, 320px);
+    margin: 60px auto;
+    padding: 20px;
+    background: #151820;
+    border-radius: 14px;
+}
+
+.display {
+    min-height: 70px;
+    margin-bottom: 16px;
+    padding: 16px;
+    text-align: right;
+    font-size: 32px;
+    background: #0b0d12;
+    color: #f5f5f5;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calc-btn {
+    padding: 18px 0;
+    font-size: 18px;
+    background: #1e2330;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calc-btn:hover {
+    background: #d8b477;
+    color: #111;
+}</code></pre>
+
+                            </div>
+
+                            <h3>Step 3: JavaScript (js/script.js)</h3>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">JAVASCRIPT</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>const display = document.getElementById("display");
+const buttons = document.querySelectorAll(".calc-btn");
+
+let current = "0";       // jo number abhi screen par hai
+let previous = null;     // pehla number
+let operator = null;     // + - * /
+let resetNext = false;   // agla number naye sire se shuru ho
+
+function calculate(a, b, op) {
+    switch (op) {
+        case "+": return a + b;
+        case "-": return a - b;
+        case "*": return a * b;
+        case "/": return b === 0 ? "Error" : a / b;
+    }
+}
+
+function handleDigit(value) {
+    if (current === "0" || resetNext) {
+        current = value;
+    } else {
+        current += value;
+    }
+    resetNext = false;
+}
+
+function handleDot() {
+    if (resetNext) {
+        current = "0.";
+        resetNext = false;
+    } else if (!current.includes(".")) {
+        current += ".";
+    }
+}
+
+function handleOperator(value) {
+    if (current === "Error") return;
+
+    previous = parseFloat(current);
+    operator = value;
+    resetNext = true;
+}
+
+function handleEquals() {
+    if (current === "Error" || operator === null || previous === null) return;
+
+    const result = calculate(previous, parseFloat(current), operator);
+
+    current = typeof result === "number"
+        ? String(parseFloat(result.toFixed(10)))
+        : result;
+
+    previous = null;
+    operator = null;
+    resetNext = true;
+}
+
+function clearAll() {
+    current = "0";
+    previous = null;
+    operator = null;
+    resetNext = false;
+}
+
+buttons.forEach(button =&gt; {
+
+    button.addEventListener("click", () =&gt; {
+
+        const value = button.dataset.value;
+
+        if (value === "C") {
+            clearAll();
+        } else if (value === "=") {
+            handleEquals();
+        } else if (value === ".") {
+            handleDot();
+        } else if ("+-*/".includes(value)) {
+            handleOperator(value);
+        } else {
+            handleDigit(value);
+        }
+
+        display.textContent = current;
+
+    });
+
+});</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>EHTIYAT</strong>
+                                <p>
+                                    Is code mein <code>eval()</code> use nahi kiya gaya.
+                                    Ye function text ko code ki tarah chala deta hai aur
+                                    security ke liye khatarnaak hai. Hamesha hisaab
+                                    khud function se karo, jaisa upar <code>calculate()</code>
+                                    mein kiya hai.
+                                </p>
+                            </div>
+
+                            <p>
+                                <strong>Apna kaam:</strong> Backspace button add karo,
+                                keyboard se numbers likhne ka support do
+                                (<code>keydown</code> event), aur % ka button banao.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="responsive-checklist">
+
+                            <h2>Complete Responsive Website Ki Checklist</h2>
+
+                            <p>
+                                Koi bhi project publish karne se pehle ye list
+                                check karo. Yehi cheezein ek amateur aur
+                                professional website mein farq banati hain.
+                            </p>
+
+                            <ul>
+                                <li>Viewport meta tag lagi hui hai.</li>
+                                <li>Website mobile, tablet aur laptop teeno par theek dikhti hai (Chrome mein <code>F12</code> se test karo).</li>
+                                <li>Kisi bhi screen par horizontal scroll (left-right) nahi aata.</li>
+                                <li>Har image par <code>alt</code> likha hai aur <code>max-width: 100%</code> laga hai.</li>
+                                <li>Har page ka apna <code>title</code> aur <code>meta description</code> hai.</li>
+                                <li>Sirf ek <code>h1</code> hai aur headings sahi order mein hain.</li>
+                                <li>Saare links kaam karte hain (koi 404 nahi).</li>
+                                <li>Buttons aur links par hover aur focus ka effect hai.</li>
+                                <li>Text aur background ke rang mein itna farq hai ke asaani se padha jaye.</li>
+                                <li>Console (F12) mein koi error nahi hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>YAAD RAKHO</strong>
+                                <p>
+                                    Pehla version perfect nahi hota. Pehle chalta hua
+                                    banao, phir behtar karo. Har project ko publish
+                                    karne ke baad dobara aa kar uski kamiyan theek karna
+                                    hi developer ka asli safar hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Is Module Ka Khulasa</h2>
+
+                            <ul>
+                                <li>Coding projects banane se seekhi jati hai, sirf padhne se nahi.</li>
+                                <li>Har project ke liye saaf folder structure rakho.</li>
+                                <li>Landing page HTML aur CSS (Grid, responsive) ka imtehaan hai.</li>
+                                <li>Portfolio tumhari pehchan hai, isay hamesha update karte raho.</li>
+                                <li>Calculator JavaScript ki logic aur events ka imtehaan hai.</li>
+                                <li>Publish karne se pehle responsive checklist zaroor dekho.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>PRACTICE</strong>
+                                <p>
+                                    Teeno projects khud banao aur har ek mein kam az
+                                    kam ek nayi cheez apni taraf se add karo. Ye
+                                    projects tumhara pehla portfolio banenge. Agle
+                                    module mein hum Git aur GitHub seekhenge, taake
+                                    in projects ko save aur share kar sako.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

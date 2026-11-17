@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0d12">
+
+    <meta name="description"
+        content="Website Deployment - GitHub Pages par apni website free mein publish karna, live URL hasil karna aur masle hal karna Roman Urdu mein seekho.">
+
+    <title>Website Deployment | ZERVON Code Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+
+    <!-- JavaScript (app.js must load before lesson.js) -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/lesson.js" defer></script>
+
+</head>
+
+<body id="top" data-course="deployment">
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <a href="#lesson-content" class="skip-link">Skip to content</a>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                ZERVON<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="../index.html" class="nav-link">Home</a>
+
+                <a href="../courses.html" class="nav-link active">Courses</a>
+
+                <a href="../about.html" class="nav-link">About Us</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../courses.html" class="nav-cta">
+                    All Courses
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                    type="button">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- LESSON HERO -->
+        <section class="lesson-hero">
+
+            <div class="section-container">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <a href="../courses.html">Courses</a>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span>Website Deployment</span>
+                </nav>
+
+                <span class="section-label">MODULE 08 · PUBLISHING</span>
+
+                <h1>
+                    Website
+                    <span>Deployment.</span>
+                </h1>
+
+                <p>
+                    GitHub Pages par apni website free mein publish karo,
+                    live URL hasil karo aur apna kaam duniya ke saath share karo.
+                    Yahan tumhara pura safar mukammal hota hai.
+                </p>
+
+                <div class="lesson-meta">
+                    <span><i class="fa-regular fa-clock"></i> 3 Hours</span>
+                    <span><i class="fa-solid fa-signal"></i> Beginner</span>
+                    <span><i class="fa-solid fa-language"></i> Roman Urdu</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON BODY -->
+        <section class="lesson-section">
+
+            <div class="section-container">
+
+                <div class="lesson-layout">
+
+                    <!-- SIDEBAR (filled by lesson.js) -->
+                    <aside class="lesson-sidebar" aria-label="Course navigation">
+
+                        <div class="sidebar-card">
+                            <h2>COURSE MODULES</h2>
+                            <ul class="sidebar-list" id="moduleList"></ul>
+                        </div>
+
+                        <div class="sidebar-card sidebar-toc">
+                            <h2>ON THIS PAGE</h2>
+                            <ul class="sidebar-list" id="tocList"></ul>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- LESSON CONTENT -->
+                    <article class="lesson-content" id="lesson-content">
+
+                        <section class="lesson-block" id="what-is-deployment">
+
+                            <h2>Deployment Kya Hota Hai?</h2>
+
+                            <p>
+                                Abhi tumhari website sirf tumhare computer par
+                                chalti hai. Deployment (publishing) ka matlab hai
+                                usay internet par rakhna taake koi bhi, kisi bhi
+                                jagah se, ek link se usay khol sake.
+                            </p>
+
+                            <p>
+                                Is ke liye website ko ek <strong>server</strong>
+                                par rakhna parta hai, jo hamesha internet se
+                                judaa rehta hai. Is service ko <strong>hosting</strong> kehte hain.
+                            </p>
+
+                            <div class="callout">
+                                <strong>GITHUB PAGES KYUN?</strong>
+                                <p>
+                                    GitHub Pages ek free hosting service hai jo seedha
+                                    tumhare GitHub repo se website chala deti hai.
+                                    Ye HTML, CSS aur JavaScript wali <strong>static
+                                    websites</strong> ke liye bani hai, jaisi hum is
+                                    course mein bana rahe hain. Is mein kisi alag
+                                    server ya backend ki zaroorat nahi parti.
+                                </p>
+                            </div>
+
+                            <p>
+                                Is ki hadd ye hai ke ye sirf static files chalati
+                                hai. Login, database ya payment jaisi cheezein
+                                jinhein server par code chalana parta hai, wo
+                                is par nahi chalti.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="before-publishing">
+
+                            <h2>Publish Karne Se Pehle</h2>
+
+                            <p>
+                                Pichle module mein tumne apna project GitHub par
+                                push kar liya tha. Ab ye cheezein check karo:
+                            </p>
+
+                            <ul>
+                                <li>Repository <strong>Public</strong> hai. GitHub ke free account par Pages sirf public repo ke liye milta hai.</li>
+                                <li>Main file ka naam bilkul <code>index.html</code> hai (chhote haroof mein) aur wo repo ke sab se bahar wale hisse (root) mein hai, kisi folder ke andar nahi.</li>
+                                <li>Saare links aur file paths <strong>relative</strong> hain.</li>
+                                <li>Website tumhare computer par Live Server se theek chal rahi hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>RELATIVE PATHS KI AHEMIYAT</strong>
+                                <p>
+                                    Ye likho: <code>css/style.css</code> ya
+                                    <code>../index.html</code>. Ye mat likho:
+                                    <code>/css/style.css</code> (shuru mein / ke
+                                    saath) ya <code>C:/Users/...</code>. GitHub Pages
+                                    par tumhari website ek folder jaisi jagah
+                                    (<code>username.github.io/repo-name/</code>)
+                                    mein hoti hai, is liye <code>/</code> se shuru
+                                    hone wale raaste galat jagah dhoondhte hain aur
+                                    CSS aur images load nahi hoti.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="github-pages-steps">
+
+                            <h2>GitHub Pages Par Website Live Karna</h2>
+
+                            <ol>
+                                <li>GitHub par apna repository kholo.</li>
+                                <li>Upar wale menu mein <strong>Settings</strong> par click karo.</li>
+                                <li>Left sidebar mein <strong>Pages</strong> chuno.</li>
+                                <li><strong>Build and deployment</strong> ke neeche <strong>Source</strong> mein <strong>Deploy from a branch</strong> chuno.</li>
+                                <li><strong>Branch</strong> mein <code>main</code> aur folder mein <code>/ (root)</code> chuno.</li>
+                                <li><strong>Save</strong> dabao.</li>
+                                <li>Ek ya do minute intezar karo aur page refresh karo.</li>
+                            </ol>
+
+                            <p>
+                                Page ke upar ek message aayega jis mein tumhari
+                                website ka link hoga. Is ki shakal ye hogi:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">URL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>https://USERNAME.github.io/REPOSITORY-NAME/</code></pre>
+
+                            </div>
+
+                            <p>
+                                Mubarak ho, tumhari website live hai! Ye link
+                                kisi ko bhi bhej do, wo apne mobile ya computer par khol lega.
+                            </p>
+
+                            <div class="callout">
+                                <strong>PEHLI DAFA INTEZAR</strong>
+                                <p>
+                                    Pehli dafa publish hone mein kuch minute lag sakte
+                                    hain. Repo ke <strong>Actions</strong> tab mein tum
+                                    dekh sakte ho ke deployment chal rahi hai ya mukammal
+                                    ho chuki hai. Jab wahan hara (green) nishan aa jaye
+                                    to link kaam karega.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="update-website">
+
+                            <h2>Website Ko Update Karna</h2>
+
+                            <p>
+                                Koi badlaav karna ho to wohi teen commands jo tumne
+                                pichle module mein seekhi hain:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">TERMINAL</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>git add .
+git commit -m "Contact section ka text theek kiya"
+git push</code></pre>
+
+                            </div>
+
+                            <p>
+                                Push karte hi GitHub khud naya version publish kar
+                                deta hai. Is mein ek do minute lag sakte hain.
+                                Agar browser mein purani website nazar aaye to
+                                <code>Ctrl + Shift + R</code> daba kar page ko
+                                dobara zabardasti load karo.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="username-site">
+
+                            <h2>Apni Pehchan Wali Website (username.github.io)</h2>
+
+                            <p>
+                                Upar wale tareeqe se link mein repo ka naam bhi aata
+                                hai. Agar tum chaho ke tumhari main portfolio ka link
+                                sirf <code>username.github.io</code> ho, to ek khaas
+                                naam ka repo banao:
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">REPO KA NAAM</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>USERNAME.github.io</code></pre>
+
+                            </div>
+
+                            <p>
+                                Yahan <code>USERNAME</code> ki jagah apna GitHub
+                                username likho (bilkul wahi spelling). Is repo mein
+                                portfolio ki files rakho aur upar wale steps se Pages
+                                on kar do. Link ban jayega:
+                                <code>https://USERNAME.github.io/</code>. Har account
+                                ka ek aisa hi portfolio repo ho sakta hai, aur baqi
+                                projects ke apne alag links rehte hain.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="custom-domain">
+
+                            <h2>Apna Domain (Optional)</h2>
+
+                            <p>
+                                Agar tum <code>github.io</code> ki jagah apna naam
+                                (jaise <code>zervon.com</code>) lagana chaho to
+                                domain kisi domain seller se kharidna parta hai (ye
+                                free nahi hota, saalana qeemat hoti hai). Phir:
+                            </p>
+
+                            <ol>
+                                <li>GitHub ke <strong>Settings &rarr; Pages</strong> mein <strong>Custom domain</strong> ke box mein apna domain likh kar Save karo.</li>
+                                <li>Domain seller ke DNS settings mein GitHub ki hidayat ke mutabiq records add karo (GitHub ka documentation us waqt ki sahi values batata hai).</li>
+                                <li>DNS ke update hone ka intezar karo (kuch minute se kuch ghantay).</li>
+                                <li>Pages ki settings mein <strong>Enforce HTTPS</strong> tick karo.</li>
+                            </ol>
+
+                            <div class="callout">
+                                <strong>PEHLE SEEKHO</strong>
+                                <p>
+                                    Shuru mein free <code>github.io</code> link se hi
+                                    kaam chalao. Domain tab lo jab tumhara portfolio ya
+                                    project tayyar ho aur tum usay seriously share
+                                    karna chaho.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="troubleshooting">
+
+                            <h2>Masle Aur Unke Hal</h2>
+
+                            <ul>
+                                <li>
+                                    <strong>Link kholne par 404 (page not found) aata hai:</strong>
+                                    check karo ke file ka naam <code>index.html</code> hai
+                                    (index.htm ya Index.html nahi) aur wo repo ke root mein hai.
+                                    Pages settings mein sahi branch aur <code>/ (root)</code>
+                                    chuna hua hai ya nahi, ye bhi dekho.
+                                </li>
+                                <li>
+                                    <strong>Website khul gayi lekin design nahi hai:</strong>
+                                    CSS file ka raasta galat hai. Raaste <code>/</code> se
+                                    shuru to nahi? Aur folder ya file ke naam ke haroof
+                                    (chhote ya bare) bilkul sahi hain?
+                                </li>
+                                <li>
+                                    <strong>Computer par chal rahi thi, online par images nahi aati:</strong>
+                                    GitHub Pages haroof ke chhote bare hone (case) par
+                                    sakhti karta hai. <code>Images/Photo.JPG</code> aur
+                                    <code>images/photo.jpg</code> alag samjhe jate hain.
+                                    Windows is farq ko nazar andaz kar deta hai, is liye
+                                    wahan masla nazar nahi aata.
+                                </li>
+                                <li>
+                                    <strong>Badlaav push kiya lekin website purani hai:</strong>
+                                    Actions tab mein dekho deployment mukammal hui ya
+                                    nahi, thora intezar karo, phir <code>Ctrl + Shift + R</code>
+                                    se dobara load karo.
+                                </li>
+                                <li>
+                                    <strong>Pages ka option nazar nahi aata ya disabled hai:</strong>
+                                    repo private to nahi? Free account par Pages ke liye
+                                    repo public hona chahiye.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Kisi bhi masle mein browser ka Console (<code>F12</code>)
+                                kholo. Wahan laal rang mein likha hota hai ke kaunsi
+                                file nahi mil rahi, aur usi se masla pakar mein aa jata hai.
+                            </p>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="custom-404">
+
+                            <h2>Apna 404 Page</h2>
+
+                            <p>
+                                Agar koi galat link khole to GitHub Pages ek saada sa
+                                page dikhata hai. Repo ke root mein <code>404.html</code>
+                                naam ki file bana do, GitHub Pages ghalat link par
+                                wahi dikhayega.
+                            </p>
+
+                            <div class="code-block">
+
+                                <div class="code-block-header">
+                                    <span class="code-lang">HTML</span>
+
+                                    <button class="copy-btn" type="button">
+                                        <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Nahi Mila&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;404&lt;/h1&gt;
+    &lt;p&gt;Ye page mojood nahi hai.&lt;/p&gt;
+    &lt;a href="index.html"&gt;Home par wapas jao&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                            </div>
+
+                            <div class="callout">
+                                <strong>NOTE</strong>
+                                <p>
+                                    Project ke URL (<code>username.github.io/repo/</code>)
+                                    par ghalat link ke liye 404 page mein <code>href</code>
+                                    ko relative rakho aur CSS ka link bhi isi tarah likho,
+                                    warna wo us waqt load nahi hoga.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="share-checklist">
+
+                            <h2>Share Karne Se Pehle Ki Checklist</h2>
+
+                            <ul>
+                                <li>Live link tumhare mobile aur kisi doosre device par khol kar dekha hai.</li>
+                                <li>Saare pages aur links kaam karte hain.</li>
+                                <li>Console (F12) mein koi error nahi.</li>
+                                <li>Repo mein koi password, API key ya personal maloomat nahi.</li>
+                                <li>Repo ki description mein website ka link likha hua hai (repo ke upar About ke paas edit se).</li>
+                                <li>Repo mein ek <code>README.md</code> hai jis mein project ka chhota taaruf aur live link hai.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>APNA KAAM DIKHAO</strong>
+                                <p>
+                                    Live link apne dosto, family aur social media
+                                    par share karo, aur apne GitHub profile par
+                                    pin kar do. Ye tumhara asli portfolio hai jo
+                                    clients aur companies ko tumhari skills dikhata hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <section class="lesson-block" id="summary">
+
+                            <h2>Course Ka Khulasa</h2>
+
+                            <ul>
+                                <li>Deployment website ko internet par rakhna hai taake sab dekh sakein.</li>
+                                <li>GitHub Pages static websites ke liye free hosting hai.</li>
+                                <li>Repo public ho, <code>index.html</code> root mein ho aur raaste relative hon.</li>
+                                <li>Settings &rarr; Pages mein <code>main</code> branch aur <code>/ (root)</code> chuno.</li>
+                                <li>Update ke liye bas <code>add</code>, <code>commit</code> aur <code>push</code>.</li>
+                                <li>Masle aaye to 404, raaste, haroof ke farq aur Console dekho.</li>
+                            </ul>
+
+                            <div class="callout">
+                                <strong>AB TUMHARI BAARI</strong>
+                                <p>
+                                    Tumne VS Code seekha, HTML, CSS aur JavaScript
+                                    seekhi, projects banaye, Git aur GitHub use kiya
+                                    aur ab website live bhi kar sakte ho. Apna pehla
+                                    project publish karo, uska link share karo, aur
+                                    seekhna kabhi band mat karo. Har naya project
+                                    tumhein behtar developer banata hai.
+                                </p>
+                            </div>
+
+                        </section>
+
+
+                        <!-- PREVIOUS / NEXT (filled by lesson.js) -->
+                        <nav class="lesson-nav" id="lessonNav" aria-label="Lesson navigation"></nav>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="../index.html" class="logo">
+                        ZERVON<span>.</span>
+                    </a>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                        Apna developer journey yahan se shuru karo.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Platform</h3>
+
+                    <a href="../index.html">Home</a>
+
+                    <a href="../courses.html">All Courses</a>
+
+                    <a href="../about.html">About Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Development</h3>
+
+                    <a href="html.html">HTML</a>
+
+                    <a href="css.html">CSS</a>
+
+                    <a href="javascript.html">JavaScript</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="github.html">Git &amp; GitHub</a>
+
+                    <a href="deployment.html">Deployment</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ZERVON CODE ACADEMY.
+                    All Rights Reserved.
+                </p>
+
+                <a href="#top" class="back-to-top">
+                    Back to Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
