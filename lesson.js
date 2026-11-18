@@ -2,8 +2,8 @@
 /* ==========================================
    ZERVON CODE ACADEMY
    LESSON PAGES JAVASCRIPT
-   Requires js/app.js (loaded first) for the
-   global `courses` array.
+   Requires app.js (loaded first) for the
+   global courses array.
    Each lesson page sets <body data-course="id">
 ========================================== */
 
@@ -11,6 +11,7 @@
     "use strict";
 
     const currentId = document.body.dataset.course;
+
     const hasCourses =
         typeof courses !== "undefined" && Array.isArray(courses);
 
@@ -66,7 +67,7 @@
 
                 return `
                     <li>
-                        <a href="../${course.link}"
+                        <a href="${course.link}"
                            class="${isActive ? "active" : ""}"
                            ${isActive ? 'aria-current="page"' : ""}>
                             <span class="num">${course.number}</span>
@@ -86,7 +87,7 @@
 
             const prevCard = prev
                 ? `
-                    <a href="../${prev.link}" class="lesson-nav-card prev">
+                    <a href="${prev.link}" class="lesson-nav-card prev">
                         <small>
                             <i class="fa-solid fa-arrow-left"></i>
                             PREVIOUS
@@ -98,7 +99,7 @@
 
             const nextCard = next
                 ? `
-                    <a href="../${next.link}" class="lesson-nav-card next">
+                    <a href="${next.link}" class="lesson-nav-card next">
                         <small>
                             NEXT
                             <i class="fa-solid fa-arrow-right"></i>
@@ -107,7 +108,7 @@
                     </a>
                 `
                 : `
-                    <a href="../courses.html" class="lesson-nav-card next">
+                    <a href="courses.html" class="lesson-nav-card next">
                         <small>
                             COMPLETED
                             <i class="fa-solid fa-flag-checkered"></i>
