@@ -36,21 +36,21 @@ if (typeof courses === "undefined" || !Array.isArray(courses)) {
     function createCourseCard(course) {
 
         return `
-            <article class="course-card">
+            <article class="all-course-card">
 
-                <div class="course-card-top">
+                <div class="all-course-top">
 
-                    <span class="course-category">
+                    <span class="all-course-category">
                         ${course.category}
                     </span>
 
-                    <span class="course-number">
+                    <span class="all-course-number">
                         ${course.number}
                     </span>
 
                 </div>
 
-                <div class="course-icon">
+                <div class="all-course-icon">
                     <i class="${course.icon}" aria-hidden="true"></i>
                 </div>
 
@@ -58,7 +58,7 @@ if (typeof courses === "undefined" || !Array.isArray(courses)) {
 
                 <p>${course.description}</p>
 
-                <div class="course-meta">
+                <div class="all-course-meta">
 
                     <span>
                         <i class="fa-regular fa-clock"></i>
@@ -74,7 +74,7 @@ if (typeof courses === "undefined" || !Array.isArray(courses)) {
 
                 <a
                     href="${course.link}"
-                    class="course-explore"
+                    class="all-course-link"
                     aria-label="Start ${course.title}">
 
                     Start Learning
