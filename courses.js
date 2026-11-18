@@ -1,7 +1,8 @@
+
 /* ==========================================
    ZERVON CODE ACADEMY
    COURSES PAGE JAVASCRIPT
-   Requires js/app.js loaded first
+   Requires app.js loaded first
 ========================================== */
 
 "use strict";
@@ -72,7 +73,7 @@ if (typeof courses === "undefined" || !Array.isArray(courses)) {
                 </div>
 
                 <a
-                    href="${course.link}"
+                    href="courses/${course.link}"
                     class="course-explore"
                     aria-label="Start ${course.title}">
 
