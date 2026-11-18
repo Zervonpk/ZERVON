@@ -1,3 +1,4 @@
+
 /* ==========================================
    ZERVON CODE ACADEMY
    LESSON PAGES JAVASCRIPT
@@ -10,7 +11,8 @@
     "use strict";
 
     const currentId = document.body.dataset.course;
-    const hasCourses = typeof courses !== "undefined" && Array.isArray(courses);
+    const hasCourses =
+        typeof courses !== "undefined" && Array.isArray(courses);
 
 
     /* ------------------------------------------
@@ -34,8 +36,12 @@
 
     }
 
-    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("scroll", updateProgress, {
+        passive: true
+    });
+
     window.addEventListener("resize", updateProgress);
+
     updateProgress();
 
 
@@ -48,7 +54,9 @@
 
     if (hasCourses) {
 
-        const index = courses.findIndex(course => course.id === currentId);
+        const index = courses.findIndex(
+            course => course.id === currentId
+        );
 
         if (moduleList) {
 
@@ -77,21 +85,36 @@
             const next = courses[index + 1];
 
             const prevCard = prev
-                ? `<a href="../${prev.link}" class="lesson-nav-card prev">
-                       <small><i class="fa-solid fa-arrow-left"></i> PREVIOUS</small>
-                       <strong>${prev.title}</strong>
-                   </a>`
+                ? `
+                    <a href="../${prev.link}" class="lesson-nav-card prev">
+                        <small>
+                            <i class="fa-solid fa-arrow-left"></i>
+                            PREVIOUS
+                        </small>
+                        <strong>${prev.title}</strong>
+                    </a>
+                `
                 : "<span></span>";
 
             const nextCard = next
-                ? `<a href="../${next.link}" class="lesson-nav-card next">
-                       <small>NEXT <i class="fa-solid fa-arrow-right"></i></small>
-                       <strong>${next.title}</strong>
-                   </a>`
-                : `<a href="../courses.html" class="lesson-nav-card next">
-                       <small>COMPLETED <i class="fa-solid fa-flag-checkered"></i></small>
-                       <strong>Back to All Courses</strong>
-                   </a>`;
+                ? `
+                    <a href="../${next.link}" class="lesson-nav-card next">
+                        <small>
+                            NEXT
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </small>
+                        <strong>${next.title}</strong>
+                    </a>
+                `
+                : `
+                    <a href="../courses.html" class="lesson-nav-card next">
+                        <small>
+                            COMPLETED
+                            <i class="fa-solid fa-flag-checkered"></i>
+                        </small>
+                        <strong>Back to All Courses</strong>
+                    </a>
+                `;
 
             lessonNav.innerHTML = prevCard + nextCard;
 
@@ -109,20 +132,30 @@
 
     if (tocList && blocks.length) {
 
-        tocList.innerHTML = Array.from(blocks).map((block, i) => {
+        const tocItems = Array.from(blocks)
+            .map((block, i) => {
 
-            const title = block.querySelector("h2").textContent;
+                const heading = block.querySelector("h2");
 
-            return `
-                <li>
-                    <a href="#${block.id}">
-                        <span class="num">${String(i + 1).padStart(2, "0")}</span>
-                        ${title}
-                    </a>
-                </li>
-            `;
+                if (!heading) return "";
 
-        }).join("");
+                const title = heading.textContent.trim();
+
+                return `
+                    <li>
+                        <a href="#${block.id}">
+                            <span class="num">
+                                ${String(i + 1).padStart(2, "0")}
+                            </span>
+                            ${title}
+                        </a>
+                    </li>
+                `;
+
+            })
+            .filter(Boolean);
+
+        tocList.innerHTML = tocItems.join("");
 
         if ("IntersectionObserver" in window) {
 
@@ -136,14 +169,17 @@
 
                         link.classList.toggle(
                             "active",
-                            link.getAttribute("href") === "#" + entry.target.id
+                            link.getAttribute("href") ===
+                            "#" + entry.target.id
                         );
 
                     });
 
                 });
 
-            }, { rootMargin: "-20% 0px -70% 0px" });
+            }, {
+                rootMargin: "-20% 0px -70% 0px"
+            });
 
             blocks.forEach(block => observer.observe(block));
 
@@ -162,16 +198,23 @@
 
         area.value = text;
         area.style.position = "fixed";
+        area.style.left = "-9999px";
         area.style.opacity = "0";
 
         document.body.appendChild(area);
         area.select();
 
+        let copied = false;
+
         try {
-            document.execCommand("copy");
+            copied = document.execCommand("copy");
+        } catch (error) {
+            copied = false;
         } finally {
             document.body.removeChild(area);
         }
+
+        return copied;
 
     }
 
@@ -187,19 +230,43 @@
         button.addEventListener("click", async () => {
 
             const text = code.textContent;
+            let copied = false;
 
             try {
-                await navigator.clipboard.writeText(text);
+
+                if (navigator.clipboard &&
+                    typeof navigator.clipboard.writeText === "function") {
+
+                    await navigator.clipboard.writeText(text);
+                    copied = true;
+
+                } else {
+
+                    copied = fallbackCopy(text);
+
+                }
+
             } catch (error) {
-                fallbackCopy(text);
+
+                copied = fallbackCopy(text);
+
+            }
+
+            if (!copied) {
+                if (label) label.textContent = "Copy failed";
+                return;
             }
 
             button.classList.add("copied");
+
             if (label) label.textContent = "Copied!";
 
             setTimeout(() => {
+
                 button.classList.remove("copied");
+
                 if (label) label.textContent = "Copy";
+
             }, 2000);
 
         });
