@@ -80,7 +80,7 @@ const courses = [
         icon: "fa-solid fa-code",
         duration: "8 Hours",
         level: "Intermediate",
-        link: "projects.html"
+        link: "project.html"
     },
 
     {
