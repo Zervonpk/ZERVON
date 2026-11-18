@@ -73,7 +73,7 @@ if (typeof courses === "undefined" || !Array.isArray(courses)) {
                 </div>
 
                 <a
-                    href="courses/${course.link}"
+                    href="${course.link}"
                     class="course-explore"
                     aria-label="Start ${course.title}">
 
