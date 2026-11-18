@@ -263,7 +263,7 @@ function createCourseCard(course) {
 
 
             <a
-                href="courses/${course.link}"
+                href="${course.link}"
                 class="course-explore"
                 aria-label="Explore ${course.title}">
 
